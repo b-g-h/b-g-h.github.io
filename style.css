@@ -1,0 +1,87 @@
+body {
+    font-family: Helvetica;
+  	font-size: 1.2em;
+    line-height: 1.45;
+    margin: 1.45em 0 1.45em 0;
+    color: #1a1f3e;
+    letter-spacing: .05em;
+    padding-left: 2em;
+    padding-right: 3em;
+    max-width: 120em;
+}
+h1 {
+  background-color: rgb(22, 65, 148);
+  line-height: 1.5;
+  padding: 0.4em;
+  color: white;
+}
+h2 {
+	background-color: rgb(170, 210, 255);
+  padding: 0.4em;
+  color: #1a1f3e;
+}
+h3 {
+  color: #1a1f3e;
+  border-bottom-color: #1a1f3e;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+input {
+  font-size: 29px;
+  background-color:#ffef83;
+  border-style: solid;
+  border-width: 2;
+  border-color: black;
+}
+
+a {
+  color: #ad005f;
+  text-decoration: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #ad005f;
+  border-bottom-style: solid;
+  line-height: 2;
+}
+
+button {
+    background-color: rgb(22, 65, 148);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight:bold;
+}
+button:hover {
+    background-color: rgb(170, 210, 255); /* Green */
+    color: black;
+    font-weight:bold;
+}
+
+.wrap-element {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.wrapped-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*Farben:
+/*Farben:
+#ad005f - dunkles Pink
+#ff1593ff - Pink
+#ffef83 - Gelb
+#1a1f3e - Dunkelblau
+#aad2ff - Hellblau
+rgb(22, 65, 148) - Mittelblau
+*/

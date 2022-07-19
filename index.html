@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Beispielseite Mathematikschreibweise</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js", "[a11y]/accessibility-menu.js", "AssistiveMML.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      menuSettings: {
+        collapsible: true,
+        autocollapse: false,
+        explorer: false
+      },
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+      },
+
+      sre: {
+        locale: 'de'
+      },
+
+      "HTML-CSS": {
+        fonts: ['Arial Unicode MS', "TeX"],
+        scale: 150,
+       }
+    });
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+  <h1>Mathematik für blinde und sehbehinderte Schülerinnen und Schüler</h1>
+  </header>
+  <article>
+      <h2>Problemstellung</h2>
+      <p>In Deutschland arbeiten blinde Schülerinnen und Schüler in der Regel am PC in Kombination mit einem Screenreader und einer 40er Braillezeile.</p>
+      <p>$\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$</p>
+      <h2>aktuelle Arbeitsweise</h2>
+      <div class="wrap-element">
+      <iframe class="wrapped-iframe" title="vimeo-player" src="https://player.vimeo.com/video/726944247?h=90376ec824"  frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h2>Wunsch fürs Web</h2>
+      <div class="wrap-element"><iframe class="wrapped-iframe" title="vimeo-player" src="https://player.vimeo.com/video/723346546?h=2dcc6be7fc" frameborder="0" allowfullscreen></iframe></div>
+  </article>
+</body>
+
+</html>
