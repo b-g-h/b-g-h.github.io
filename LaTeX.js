@@ -11,14 +11,11 @@ if(attribute=="math/tex"||attribute=="math/tex; mode=display")
     {k=k+1;
    var neu = document.createElement("span");
    var Eltern = document.getElementById("MathJax-Element-" + k +"-Frame").parentNode;
-   var grosseltern = Eltern.parentNode
    var child = document.getElementById("MathJax-Element-" + k +"-Frame")
 
    Eltern.insertBefore(neu, child);
    neu.classList.add("sr-only");
    neu.appendChild(document.createTextNode(document.getElementById("MathJax-Element-"+k).innerHTML));
-
     }
     {};};
-
 };
