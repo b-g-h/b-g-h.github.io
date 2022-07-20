@@ -22,6 +22,7 @@
       },
 
       "SVG": {
+        internalSpeechTitles: true,
         font: "STIX-Web",
         scale:  150,
         blacker: 5,
@@ -29,12 +30,14 @@
     });
   </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+  <script type="text/javascript" src="LaTeX.js"></script>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header>
   <h1>Mathematik für blinde und sehbehinderte Schülerinnen und Schüler</h1>
+  <p><button id="LTX" tabindex=0 name="LaTeX aktivieren" aria-labelledby="Latex aktivieren" onclick="formel()" class="BGH">Latex aktivieren</button></p>
   </header>
   <article>
     <section class="container">
