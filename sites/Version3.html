@@ -3,26 +3,11 @@
 <head>
   <title>Beispielseite Mathematikschreibweise</title>
   <script>
-    MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      internalSpeechTitles: true,
-      scale:  2,
-      blacker: 5,
-    },
-    options: {
-      menuOptions: {
-        settings: {
-          assistiveMml: true,   // true to enable assitive MathML
-          collapsible: false,   // true to enable collapsible math
-          explorer: false      // true to enable the expression explorer
-        }
-      }
-  }
-    };
-  </script>
+MathJax = {
+  loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
+};
+</script>
+
   <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
   </script>
   <link rel="stylesheet" href="../style.css">
@@ -31,14 +16,14 @@
 <body>
   <header>
   <h1>Mathematik für blinde und sehbehinderte Schülerinnen und Schüler</h1>
-  
+
   </header>
   <article>
     <section class="container">
       <h2>Problemstellung</h2>
       <p>In Deutschland arbeiten blinde Schülerinnen und Schüler in der Regel an einem PC in Kombination mit einem Screenreader und einer 40er Braillezeile.</p>
       <p>Da auf einer Braillezeile keine Abweichungen von der Grundlinie möglich sind, ist es erforderlich, Ausdrücke wie Wurzeln, Hochzahlen, Brüche oder auch Integrale in eine lineare Form zu bringen. Im deutschsprachigen Raum hat sich im digitalen Arbeiten LaTeX als Mathematikschrift etabliert.</p>
-      <p>So wird der Ausdruck $\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$ von den Schülern im Quellcode gelesen und bearbeitet.</p>
+      <p>So wird der Ausdruck `x_(1,2)=(-b +- sqrt(b^2 – 4ac))/(2a)` von den Schülern im Quellcode gelesen und bearbeitet.</p>
       <p>Die Schreibweise lässt sich im Texteditor Word mit eigens dafür erstellten Menübändern bei Bedarf verkürzen und wieder erweitern.</p>
       <p><strong>LaTeX-Schreibweise:</strong> \frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}<br><strong>Kurzschreibweise:</strong> \f{x +4}{x} =\f{16}{x^2 -4x} -\f{4}{x -4}</p>
     </section>
@@ -68,7 +53,8 @@
       <h2>Wunsch fürs Web</h2>
       <ul>
         <li> Stufe 1: LaTeX-Code als Ausgabe auf die Zeile (kopierbarer Inhalt)
-        <li> Stufe 2: Besondere Notationen über eine Tabelle umwandeln (* statt \cdot, immer ein Leerzeichen vor einem Rechenzeichen, kurze Brüche (einstelliger Zähler/Nenner) mit Slash Schreibweise)
+        <li> Stufe 2: Besondere Notationen über eine Tabelle umwandeln (* statt \cdot, immer ein Leerzeichen vor einem Rechenzeichen, kurze Brüche (einstelliger Zähler/Nenner) mit Slash Schreibweise), <br> alternativ: gerne auch ASCII-Math
+
         <li> Stufe 3: Explorer MathJax - gleichzeitige Ausgabe auf der Braillezeile
       </ul>
       <div class="wrap-element"><iframe class="wrapped-iframe" title="vimeo-player" src="https://player.vimeo.com/video/723346546?h=2dcc6be7fc" frameborder="0" allowfullscreen></iframe></div>
