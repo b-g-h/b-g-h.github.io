@@ -69,6 +69,15 @@ button:hover {
     font-weight:bold;
 }
 
+button[disabled="true"]{
+    background-color: lightgrey;
+    color: black;
+}
+button[disabled="true"]:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
 section.container {
   width: 45em;
   max-width: 90%;

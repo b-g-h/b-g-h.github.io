@@ -1,10 +1,11 @@
 // Mein Shortcode (im Theme)
 function formel()
 {
-  var list = document.getElementsByTagName("script"); k =0;
+var list = document.getElementsByTagName("script"); k =0;
 var b1 = document.getElementById("LTX");
 b1.setAttribute("disabled", true);
-b1.setAttribute("style", "display: none;")
+b1.innerHTML = "LaTeX Anzeige ist aktiv";
+/*b1.setAttribute("style", "display: none;")*/
 
 for (i=0; i<list.length; i++){var attribute  = list[i].getAttribute("type");
 if(attribute=="math/tex"||attribute=="math/tex; mode=display")
