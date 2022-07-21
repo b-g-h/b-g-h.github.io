@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Beispielseite Mathematikschreibweise</title>
+  <script>
+    MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      internalSpeechTitles: true,
+      scale:  2,
+      blacker: 5,
+    },
+    options: {
+      menuOptions: {
+        settings: {
+          assistiveMml: true,   // true to enable assitive MathML
+          collapsible: false,   // true to enable collapsible math
+          explorer: false      // true to enable the expression explorer
+        }
+      }
+  }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+  <h1>Mathematik für blinde und sehbehinderte Schülerinnen und Schüler</h1>
+  
+  </header>
+  <article>
+    <section class="container">
+      <h2>Problemstellung</h2>
+      <p>In Deutschland arbeiten blinde Schülerinnen und Schüler in der Regel an einem PC in Kombination mit einem Screenreader und einer 40er Braillezeile.</p>
+      <p>Da auf einer Braillezeile keine Abweichungen von der Grundlinie möglich sind, ist es erforderlich, Ausdrücke wie Wurzeln, Hochzahlen, Brüche oder auch Integrale in eine lineare Form zu bringen. Im deutschsprachigen Raum hat sich im digitalen Arbeiten LaTeX als Mathematikschrift etabliert.</p>
+      <p>So wird der Ausdruck $\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$ von den Schülern im Quellcode gelesen und bearbeitet.</p>
+      <p>Die Schreibweise lässt sich im Texteditor Word mit eigens dafür erstellten Menübändern bei Bedarf verkürzen und wieder erweitern.</p>
+      <p><strong>LaTeX-Schreibweise:</strong> \frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}<br><strong>Kurzschreibweise:</strong> \f{x +4}{x} =\f{16}{x^2 -4x} -\f{4}{x -4}</p>
+    </section>
+
+    <section class="container">
+      <h2>aktuelle Arbeitsweise in Word</h2>
+      <p>Da blinde Nutzer nie den Gesamtüberblick über eine Seite oder auch mehrere Zeilen auf einmal haben können, ist es erforderlich, dass gute Arbeitstechniken zur Fehlervermeidung angewandt werden.</p>
+      <p>Schüler kopieren aktuell Aufgaben aus ihren Schulbüchern, welche sie als Word-Dokumente erhalten, heraus. So muss nicht aus dem Gedächtnis abgeschrieben werden.</p>
+      <p>Anschließend werden auch bei der Weiterbearbeitung in Word über Copy & Paste systematisch beispielsweise Äquivalenzumformungen vorgenommen, um Fehlerquellen zu vermeiden.</p>
+      <p>Über das LaTeX-Menü können Ausdrücke über Shortcuts schnell hinzugefügt werden.</p>
+      <p>Diese Arbeitstechniken ermöglichen es, effektiv, zeitsparend und zielgerichtet zu arbeiten. Erst so ist eine Zusammenarbeit im gemeinsamen Unterricht mit sehendend Mitschülern möglich.</p>
+      <div class="wrap-element">
+      <iframe class="wrapped-iframe" title="vimeo-player" src="https://player.vimeo.com/video/726944247?h=90376ec824"  frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Situation im Web</h2>
+      <ul>
+        <li> AssistiveMML (Sprachausgabe über JAWS oder NVDA)
+        <li> NemethCode auf Braillezeile
+        <li> Explorer MathJax
+        <li> keine guten Kopiermöglichkeiten (Schüler brauchen nicht nur einen   Ausdruck, sondern gesamter Kontext)
+      </ul>
+    </section>
+    <section class="container">
+      <h2>Wunsch fürs Web</h2>
+      <ul>
+        <li> Stufe 1: LaTeX-Code als Ausgabe auf die Zeile (kopierbarer Inhalt)
+        <li> Stufe 2: Besondere Notationen über eine Tabelle umwandeln (* statt \cdot, immer ein Leerzeichen vor einem Rechenzeichen, kurze Brüche (einstelliger Zähler/Nenner) mit Slash Schreibweise)
+        <li> Stufe 3: Explorer MathJax - gleichzeitige Ausgabe auf der Braillezeile
+      </ul>
+      <div class="wrap-element"><iframe class="wrapped-iframe" title="vimeo-player" src="https://player.vimeo.com/video/723346546?h=2dcc6be7fc" frameborder="0" allowfullscreen></iframe></div>
+    </section>
+  </article>
+</body>
+
+</html>
