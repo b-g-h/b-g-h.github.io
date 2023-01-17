@@ -78,13 +78,10 @@ Möchte man Verlinkungen einfügen muss man zusätzlich die Definition von <code
 
 
 <ul>
-<li><a href="svg2.html"> Beispielseite 1 - reine Bilddatei </a>
-<li><a href="svg.html"> Beispielseite 2 - Säulendiagramm </a>
-<li><a href="svg3.html"> Beispielseite 3 - Komplexerer Ablauf </a>
+<li><a href="svg2.html" id="svg2"> Beispielseite 1 - reine Bilddatei </a>
+<li><a href="svg.html" id="svg1"> Beispielseite 2 - Säulendiagramm </a>
+<li><a href="svg3.html" id="svg3"> Beispielseite 3 - Komplexerer Ablauf </a>
 </ul>
-
-
-
 <h3> Möglichkeiten der Einbindung </h3>
 <h4>im &lt;img>-Tag</h4>
 Wird eine SVG Grafik in ein img-Tag eingebunden, so ist die Grafik wie jede Abbildung zu handhaben. Ein Alternativtext wird über das alt-Attribut hinzugefügt.
@@ -93,11 +90,6 @@ Soll die Grafik nicht weiterverarbeitet werden (Stilanpassung, Animation, Manipu
 <h4>inline im &lt;svg> Tag</h4>
 SVG-Code kann direkt in die html-Seite geschrieben werden. Dadurch bleiben die Funktionen von SVG erhalten und es ist vielleicht die beste derzeitige Möglichkeit. Über kleine Tricks lässt sich der Quelltext auch
 </pre>
-
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-    <!-- Remaining SVG code here  -->
-</svg>
 
 <h4>weitere Optionen</h4>
 Neben der Einbindung im img-Tag und der inline-Einbindung sind verschiedene andere Optionen von technischer Seite her möglich, aber nicht barrierefrei.
