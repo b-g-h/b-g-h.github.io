@@ -16,8 +16,8 @@
             <title>Prozessablauf</title>
             <g role="list">
                 <g role="listitem" aria-labelledby="pfeil1">
-                        <rect role="img" fill="white" y="122" width="57" height="45">
-                            <title id=pfeil1>Prozessbeginn - Pfeil nach rechts</title>
+                        <rect id="pfeil_link" role="img" fill="white" y="122" width="57" height="45">
+                            <title>Prozessbeginn - Pfeil nach rechts</title>
                         </rect>
 
                         <text font-size="8">
@@ -30,16 +30,16 @@
                 </g>
 
                 <g role="listitem" aria-labelledby="elli1">
-                        <ellipse role="img" id="wd-1" ry="18" rx="38" cy="140" cx="97" stroke="black" fill="#fff">
+                      <ellipse role="img" id="wd-1" ry="18" rx="38" cy="140" cx="97" stroke="black" fill="#fff">
                             <title id="elli1">Erste Ellipse - 1. Prüfung</title>
-                        </ellipse>
-                        <text aria-hidden="true" font-size="14" y="144" x="97" text-anchor="middle">1. Prüfung</text>
-
+                      </ellipse>
+                      <text aria-hidden="true" font-size="14" y="144" x="97" text-anchor="middle">1. Prüfung</text>
                     <g role="list">
                         <g role="listitem">
                                 <g role="img" aria-labelledby="pfeil2">
                                     <title id=pfeil2>selbstreferenzierender Pfeil: Bei Fail Wiederholung</title>
                                 </g>
+
                                 <text aria-hidden="true" font-size="8"><tspan x="60" y="92">Bei Fail Wiederholung</tspan>
                                 </text>
                                 <path d="M78,124C73,114 79,104 97,104 108,104 115,108 117,114" fill="none" stroke="black" stroke-dasharray="6 1"></path>
@@ -77,7 +77,7 @@
                                 </text>
 
                                 <path stroke="#000" d="M242,124C238,114 244,104 260,104 271,104 277,108 279,114" stroke-dasharray="5 11" fill="none"></path>
-                                <path stroke="#060" d="M242,124C238,114 244,104 260,104 271,104 277,108 279,114" stroke-dasharray="5 11" stroke-dashoffset="8" fill="none"></path>
+                                <path stroke="#060" d="M242,124C238,114 244,104 260, 104 271,104 277,108 279,114" stroke-dasharray="5 11" stroke-dashoffset="8" fill="none"></path>
                                 <polygon points="282,114 277,124 275,113"></polygon>
                         </g>
                         <g role="listitem" >
@@ -99,13 +99,11 @@
                         </ellipse>
 
                         <text aria-hidden="true" font-size="14" y="144" x="413" text-anchor="middle">Ende</text>
-
                     <g role="list">
-
-
 
                         <!-- Return to 1.Prüfung -->
                         <g role="listitem">
+                                <a xlink:href=#wd-1>
                                 <g role="img" aria-labelledby="pfeil6">
                                     <title id="pfeil6">Pfeil nach links zur 1. Prüfung: bei kritischem Fehler Neubeginn</title>
                                 </g>
@@ -116,6 +114,7 @@
 
                                 <path d="M413,158v32h-316v-26" stroke-dasharray="2 2" stroke="#c00" fill="none"></path>
                                 <polygon points="95,164 97,159 99,164"></polygon>
+                              </a>
                         </g>
                     </g>
                 </g>
