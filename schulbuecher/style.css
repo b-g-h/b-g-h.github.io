@@ -122,16 +122,12 @@ header {
   width: 1px;
 }
 
-.codespan {
-  font-size: 105%;
 
-}
 .codespan {
   color: #ad005f;
-
   padding-left: 4px;
   padding-right: 4px;
-  font-size: 110%;
+  font-size: 95%;
 }
 
 /*Farben:

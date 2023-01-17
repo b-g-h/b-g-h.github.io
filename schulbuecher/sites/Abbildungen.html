@@ -88,14 +88,23 @@ Wird eine SVG Grafik in ein img-Tag eingebunden, so ist die Grafik wie jede Abbi
 Die Richtlinien aus <a href=#grundsaetzliches> "Grundsätzliches zu Grafiken"</a> sind dabei zu berücksichtigen.
 Soll die Grafik nicht weiterverarbeitet werden (Stilanpassung, Animation, Manipulation mit Javascript) so ist diese Einbindung ausreichend. Im DOM ist sie aber nicht vorhanden und kann daher nicht weiter angepasst werden.
 <h4>inline im &lt;svg> Tag</h4>
-SVG-Code kann direkt in die html-Seite geschrieben werden. Dadurch bleiben die Funktionen von SVG erhalten und es ist vielleicht die beste derzeitige Möglichkeit. Über kleine Tricks lässt sich der Quelltext auch
+SVG-Code kann direkt in die html-Seite geschrieben werden. Dadurch bleiben die Funktionen von SVG erhalten und es ist derzeit die beste Möglichkeit.
+Die Bildbeschreibung kann dann aber nicht in ein alt-Attribut mitgegeben werden, sondern muss über ein title-Tag (kurzer Name) und über desc-Tag die Beschreibung übergeben werden.
+Leider sind nicht alle Screenreader darauf ausgelegt, die beiden Elemente auszulesen, daher sollte es wie folgt umgesetzt werden:
+Die beiden Tags erhalten jeweils IDs <br>
+<code class="codespan">&lt;title id="TitleID_1">Titel der SVG&lt;/title><br>
+&lt;desc id="DescID_1">Ausführlichere Beschreibung der Grafik.&lt;/desc></code><br>
+Anschließend ist im &lt;svg>-tag noch der Verweis hinzuzufügen, damit alle Screenreader die Information erhalten:<br>
+<code class="codespan">aria-labelledby="TitleID_1 DescID_1"</code>
 </pre>
 
 <h4>weitere Optionen</h4>
 Neben der Einbindung im img-Tag und der inline-Einbindung sind verschiedene andere Optionen von technischer Seite her möglich, aber nicht barrierefrei.
-Daher sollte die Einbindung über &lt;object>, &lt;iframe> oder &lt;embed> Tags vermieden werden.
+Daher sollte die Einbindung über &lt;object>, &lt;iframe> oder &lt;embed> Tags vermieden werden. Falls aus irgendeinem Grunde darauf nicht verzichtet werden kann, so muss eine Fallbackalternative mit Alternativtext ergänzend hinzugefügt werden.<br>
 
 <a href="https://www.geeksforgeeks.org/svg/?ref=lbp">weitere Hinweise zur SVG Konfiguration</a>
+
+<br><a href="https://jakearchibald.github.io/svgomg/"> Hilfreiches Tool für die Optimierung von SVG (v.a. Entschlackung)</a>
 
 <br><a href="../index.html">zurück zur Hauptseite</a></p>
 
