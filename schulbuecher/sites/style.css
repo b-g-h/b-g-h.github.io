@@ -1,0 +1,73 @@
+.title{
+  font-size: 30.37px;
+}
+.desc{
+  font-size: 14px;
+}
+a{
+  fill: #1010b2;
+  text-decoration: underline;
+}
+.cls-1 {
+  fill: red;
+}
+
+.cls-2 {
+  font-size: 15.84px;
+}
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.cls-3 {
+  fill: #24c62b;
+}
+
+.cls-4 {
+  fill: #1010b2;
+}
+
+.cls-5 {
+  fill: #e29e14;
+}
+
+.cls-6 {
+  fill: #7d11c9;
+}
+
+.cls-7 {
+  letter-spacing: -1px;
+}
+
+.cls-8 {
+  fill: #f0f;
+}
+
+.cls-9 {
+  fill: #065109;
+}
+
+.cls-10 {
+  fill: #06b7f4;
+}
+
+.cls-11 {
+  fill: #fff;
+}
+
+.cls-11, .cls-12 {
+  stroke: #bfbbbf;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.cls-12 {
+  fill: none;
+}
+
+.cls-13 {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: pre;
+}
