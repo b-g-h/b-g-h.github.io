@@ -121,6 +121,19 @@ header {
   position: absolute;
   width: 1px;
 }
+
+.codespan {
+  font-size: 105%;
+
+}
+.codespan {
+  color: crimson;
+
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 110%;
+}
+
 /*Farben:
 /*Farben:
 #ad005f - dunkles Pink

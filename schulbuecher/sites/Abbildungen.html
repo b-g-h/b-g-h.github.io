@@ -10,13 +10,66 @@
   <article>
     <section class="container">
       <h1>Abbildungen</h1>
-      <h2>Materialien zum Themenfeld svg</h2>
-      
-      <a href="svg2.html"> Beispielseite 1 - reine Bilddatei </a>
-      <a href="svg.html"> Beispielseite 2 - Säulendiagramm </a>
-      <a href="svg3.html"> Beispielseite 3 - Komplexerer Ablauf </a>
-    <p><a href="../index.html">zurück zur Hauptseite</a></p>
+      <h2>Grundsätzliches zu Grafiken</h2>
+      Die folgende Zusammenstellung bezieht sich zum Großteil auf Heather Migliorisi <a href="https://css-tricks.com/accessible-svgs/">mit ihrem Beitrag auf CSS-Ticks</a>
+      <h3>Fall 1: Dekografiken</h3>
+      <div>Wenn eine Grafik rein dekorativ ist, braucht sie keinen Alternativtext. Alle img-Tags benötigen das alt-Attribut, um gültig zu sein, aber das Attribut kann leer gelassen werden (kein Leerzeichen) <img src="pathtofile.svg" alt=""> und trotzdem gültig sein.</div>
+      <h3>Fall 2: umgebender Text beschreibt Grafik</h3>
+      <figure>
+        <img width=50% src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44216/weather-radar.png" alt="">
+        <figcaption>Eine Ansicht von weather.com für Pittsburgh, 6. Juni 2016, 5:45 PM mit mehreren verstreuten Stürmen, die von West nach Ost ziehen.</figcaption>
+      </figure>
+      auch dann kann das Alt-Attribut leer bleiben. Je nach Kontext kann aber ergänzend ein Alt-Attribut hinzugefügt werden.
+<figure>
+  <img  width=50% src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44216/weather-radar.png" alt="Eine Ansicht von weather.com für Pittsburgh mit mehreren verstreuten Stürmen, die von West nach Ost ziehen.">
+  <figcaption>Als Wetterradar werden alle Radargeräte bezeichnet, die vorwiegend zur Erfassung von Wetterdaten dienen. Wetterradargeräte sind oft untereinander vernetzt und speisen ihre Radarinformation in einen Großrechner ein, der aus diesen aktuellen Beobachtungen eine Großwetterlage berechnet und eine Wettervorhersage durch Simulationen und Vergleichen mit bereits aus der Vergangenheit bekannten Wetterabläufen ermöglicht. <a href="https://de.wikipedia.org/wiki/Wetterradar">Informationen aus wikipedia</a></figcaption>
+</figure>
+<code class=codespan>
+  &lt;img ... alt="Eine Ansicht von weather.com für Pittsburgh mit mehreren verstreuten Stürmen, die von West nach Ost ziehen.">
+</code>
+<h3>Fall 3: Die Grafik erfüllt eine Funktion</h3>
+<p>Ist dies der Fall (z.B. Link  ohne Beschriftung mit lediglich einem Icon), sollte sie dem Benutzer vermittelt werden.
+</p>
+<a href="https://codepen.io/hmig"><img src="../img/codepen1.png" alt="Zeige die Codepen Seite von Heather Migliorisi"></a></code>
+<pre>
+<code class="codespan">&lt;a href="https://codepen.io/hmig">
+  &lt;img src="../img/codepen1.png"
+alt="Zeige die Codepen Seite von Heather Migliorisi">&lt;/a></code>
+</pre>
+Weitere gute Hinweise zur Entscheidung zum  Alternativtext und Co.:
+<br><a href="https://www.barrierefreies-webdesign.de/knowhow/textalternative/informative-bilder.html"> Informative Bilder bei Jan Hellbusch</a>
+<br><a href="https://www.w3.org/WAI/tutorials/images/"> Tutorial zum Thema Bilder bei W3.org </a>
+<h2>SVG und Barrierefreiheit</h2>
+<h3>Warum SVG?</h3>
+Skalierbare Vektorgrafiken (SVG) ist das bevorzugte Grafikformat im Webbereich, wenn immer eine Pixelgrafik sich vermeiden lässt (Ausnahme sind beispielsweise Fotos). Durch die verlustfreie Vergrößerbarkeit ist dieses Grafikformat wie kein anderes für responsives Design geeignet und ist die vom W3C (World Wide Web Consortium) empfohlene Variante. Zusätzlich unterstützt es Animationen, ist über das DOM beispielsweise mit Javaskript manipulierbar und ist damit für interaktive Elemente geeignet.
+Vektorbilder bestehen aus Linien, Strichen und mit Farbe gefüllten Formen, welche über Koordinaten und weitere Eigenschaften definiert sind (z.B. eine Ellipse).
+<h3>Einfaches Beispiel</h3>
+<svg width="400" height="180">
+            <ellipse cx="100" cy="100" rx="90" ry="50" stroke="black" stroke-width="7" fill="yellow"></ellipse>
+</svg>
+<pre>
+<code class="codespan">
+  &lt;svg width="100" height="100">
+  &lt;ellipse cx="100" cy="100" rx="90" ry="50" stroke="black" stroke-width="7" fill="yellow"></ellipse>
+  &lt;/svg>
+</code>
+</pre>
 
+Das kann wesentlich komplexer werden
+<svg viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" title="CodePen"><path d="m 1.15,8.45 11,-7.3 11,7.3 v 7.4 l -11,7.3 -11,-7.3 z m 0,0 11,7.4 11,-7.4 m 0,7.4 -11,-7.4 -11,7.4 m 11,-14.7 v 7.3 m 0,7.4 v 7.3"</path></svg>
+<code class="codespan">&lt;svg viewBox="0 0 138 26"  stroke="#000" title="CodePen">&lt;path d="m 1.15,8.45 11,-7.3 11,7.3 v 7.4 l -11,7.3 -11,-7.3 z m 0,0 11,7.4 11,-7.4 m 0,7.4 -11,-7.4 -11,7.4 m 11,-14.7 v 7.3 m 0,7.4 v 7.3"&lt;/path>&lt;/svg></code>
+<ul>
+<li><a href="svg2.html"> Beispielseite 1 - reine Bilddatei </a>
+<li><a href="svg.html"> Beispielseite 2 - Säulendiagramm </a>
+<li><a href="svg3.html"> Beispielseite 3 - Komplexerer Ablauf </a>
+</ul>
+
+<h3> Möglichkeiten der Einbindung </h3>
+<h2>im &lt;img>-Tag</h2>
+Wird eine SVG Grafik in ein img-Tag eingebunden, so ist die Grafik wie jede Abbildung zu handhaben. Ein Alternativtext wird über das alt-Attribut hinzugefügt.
+<h2>inline im &lt;svg> Tag</h2>
+
+<p><a href="../index.html">zurück zur Hauptseite</a></p>
   </article>
 </body>
 
