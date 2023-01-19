@@ -13,7 +13,7 @@
       <h2 id="grundsaetzliches">Grundsätzliches zu Grafiken</h2>
       Die folgende Zusammenstellung bezieht sich zum Großteil auf Heather Migliorisi <a href="https://css-tricks.com/accessible-svgs/">mit ihrem Beitrag auf CSS-Ticks</a>
       <h3>Fall 1: Dekografiken</h3>
-      <div>Wenn eine Grafik rein dekorativ ist, braucht sie keinen Alternativtext. Alle img-Tags benötigen das alt-Attribut, um gültig zu sein, aber das Attribut kann leer gelassen werden (kein Leerzeichen) <img src="pathtofile.svg" alt=""> und trotzdem gültig sein.</div>
+      <div>Wenn eine Grafik rein dekorativ ist, braucht sie keinen Alternativtext. Alle img-Tags benötigen das alt-Attribut, um gültig zu sein, aber das Attribut kann leer gelassen werden (kein Leerzeichen) &lt;img src="pathtofile.svg" alt=""> und trotzdem gültig sein.</div>
       <h3>Fall 2: umgebender Text beschreibt Grafik</h3>
       <figure>
         <img width=50% src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44216/weather-radar.png" alt="">
@@ -24,9 +24,10 @@
   <img  width=50% src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44216/weather-radar.png" alt="Eine Ansicht von weather.com für Pittsburgh mit mehreren verstreuten Stürmen, die von West nach Ost ziehen.">
   <figcaption>Als Wetterradar werden alle Radargeräte bezeichnet, die vorwiegend zur Erfassung von Wetterdaten dienen. Wetterradargeräte sind oft untereinander vernetzt und speisen ihre Radarinformation in einen Großrechner ein, der aus diesen aktuellen Beobachtungen eine Großwetterlage berechnet und eine Wettervorhersage durch Simulationen und Vergleichen mit bereits aus der Vergangenheit bekannten Wetterabläufen ermöglicht. <a href="https://de.wikipedia.org/wiki/Wetterradar">Informationen aus wikipedia</a></figcaption>
 </figure>
-<code class=codespan>
+<code class="codespan">
   &lt;img ... alt="Eine Ansicht von weather.com für Pittsburgh mit mehreren verstreuten Stürmen, die von West nach Ost ziehen.">
 </code>
+
 <h3>Fall 3: Die Grafik erfüllt eine Funktion</h3>
 <p>Ist dies der Fall (z.B. Link  ohne Beschriftung mit lediglich einem Icon), sollte sie dem Benutzer vermittelt werden.
 </p>
@@ -44,27 +45,31 @@ Weitere gute Hinweise zur Entscheidung zum  Alternativtext und Co.:
 Skalierbare Vektorgrafiken (SVG) ist das bevorzugte Grafikformat im Webbereich, wann immer eine Pixelgrafik sich vermeiden lässt (Ausnahme sind beispielsweise Fotos). Durch die verlustfreie Vergrößerbarkeit ist dieses Grafikformat wie kein anderes für responsives Design geeignet und ist die vom W3C (World Wide Web Consortium) empfohlene Variante. Zusätzlich unterstützt es Animationen, ist über das DOM beispielsweise mit Javaskript manipulierbar und ist damit für interaktive Elemente geeignet.
 Vektorbilder bestehen aus Linien, Strichen und mit Farbe gefüllten Formen, welche über Koordinaten und weitere Eigenschaften definiert sind (z.B. eine Ellipse).
 <h3>Einfaches Beispiel</h3>
-<svg viewBox="0 0 300 180" role="img">
-  <title>Ellipsentitel</title>
-  <desc>Beschreibung</desc>
+<svg viewBox="0 0 300 180" role="img" aria-labelledby="titleElli descElli">
+  <title id="titleElli">Ellipsentitel</title>
+  <desc id="descElli">Beschreibung</desc>
   <ellipse cx="100" cy="100" rx="90" ry="50" stroke="black" stroke-width="7" fill="yellow"></ellipse>
 </svg>
 <pre>
 <code class="codespan">
-  &lt;svg viewBox="0 0 300 180" role="img">
-  &lt;title>Ellipsentitel&lt;/title>
+  &lt;svg viewBox="0 0 300 180" role="img" aria-labelledby="titleElli descElli">
+  &lt;title id="titleElli">Ellipsentitel&lt;/title>
+  &lt;desc id="descElli">Beschreibung&lt;/desc>
   &lt;ellipse cx="100" cy="100" rx="90" ry="50" stroke="black" stroke-width="7" fill="yellow"></ellipse>
   &lt;/svg>
 </code>
 </pre>
 
-Das kann wesentlich komplexer werden
-<svg role="img" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img">
+Das kann wesentlich komplexer werden - hier gleich ein Beispiel, in welchem title und desc angegeben sind, aber kein aria-labelledby. <br>
+<svg role="img" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="titleCodepen descCodepen">
   <title id="titleCodepen">Codepen Logo</title>
-  <desc>Beschreibung</desc>
+  <desc id="descCodepen">Beschreibung</desc>
   <path d="m 1.15,8.45 11,-7.3 11,7.3 v 7.4 l -11,7.3 -11,-7.3 z m 0,0 11,7.4 11,-7.4 m 0,7.4 -11,-7.4 -11,7.4 m 11,-14.7 v 7.3 m 0,7.4 v 7.3"></path></svg>
 <br>
-<code class="codespan">&lt;svg viewBox="0 0 138 26"  stroke="#000" role="img">&lt;title>Codepen Logo&lt;/title>&lt;path d="m 1.15,8.45 11,-7.3 11,7.3 v 7.4 l -11,7.3 -11,-7.3 z m 0,0 11,7.4 11,-7.4 m 0,7.4 -11,-7.4 -11,7.4 m 11,-14.7 v 7.3 m 0,7.4 v 7.3"&lt;/path>&lt;/svg></code>
+<code class="codespan">&lt;svg viewBox="0 0 138 26"  stroke="#000" role="img">
+  &lt;title id="titleCodepen">Codepen Logo&lt;/title>
+  &lt;desc id="descCodepen">Beschreibung&lt;/desc>
+  &lt;path d="m 1.15,8.45 11,-7.3 11,7.3 v 7.4 l -11,7.3 -11,-7.3 z m 0,0 11,7.4 11,-7.4 m 0,7.4 -11,-7.4 -11,7.4 m 11,-14.7 v 7.3 m 0,7.4 v 7.3"&lt;/path>&lt;/svg></code>
 <h3> Struktueller Aufbau </h3>
   <pre><code class="codespan">
 &lt;!DOCTYPE html>
@@ -98,7 +103,7 @@ Die beiden Tags erhalten jeweils IDs <br>
 &lt;desc id="DescID_1">Ausführlichere Beschreibung der Grafik.&lt;/desc></code><br>
 Anschließend ist im &lt;svg>-tag noch der Verweis hinzuzufügen, damit alle Screenreader die Information erhalten:<br>
 <code class="codespan">aria-labelledby="TitleID_1 DescID_1"</code>
-ergänzend sollte, damit alle Browser eine korrekte Ausgabe ermöglichen im svg-Tag <code class="codespan">role="group"</code> ergänzt werden.
+ergänzend sollte, damit alle Browser eine korrekte Ausgabe ermöglichen im svg-Tag <code class="codespan">role="img"</code> ergänzt werden.
 </pre>
 <br><strong>Ein großer Vorteil dieser Einbindung ist die Option beispielsweise über einen Knopfdruck die Linienstärke erhöhen zu können, andere Farbgebungen anzulegen oder Elemente auszublenden.</strong>
 <h4>weitere Optionen</h4>
@@ -112,10 +117,9 @@ Daher sollte die Einbindung über &lt;object>, &lt;iframe> oder &lt;embed> Tags 
   </ul>
 <a href="https://www.geeksforgeeks.org/svg/?ref=lbp">weitere Hinweise zur SVG Konfiguration</a>
 
-<br><a href="https://jakearchibald.github.io/svgomg/"> Hilfreiches Tool für die Optimierung von SVG (v.a. Entschlackung)</a>
+<br><a href="https://jakearchibald.github.io/svgomg/">Hilfreiches Tool für die Optimierung von SVG (v.a. Entschlackung)</a>
 
 <br><a href="../index.html">zurück zur Hauptseite</a></p>
-
   </article>
 </body>
 
