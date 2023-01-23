@@ -6,10 +6,8 @@ body {
     max-width: 120em;
 }
 header {
-  margin-top: 0px;
-  text-align: center;
+  height: 100px;
 }
-
 
 h1 {
   background-color: rgb(22, 65, 148);
@@ -129,6 +127,112 @@ header {
   padding-right: 4px;
   font-size: 95%;
 }
+
+
+
+/*Navigationsbereich - Header und Hamburger*/
+#page-nav {
+  width: 100%;
+}
+
+/* Desktopansicht - weg mit Hamburger */
+#page-nav label, #hamburger {
+  display: none;
+}
+
+/* Menu Items */
+ul.desktopmenu {
+  list-style-type: none;
+  margin: 0 100px 0 0;
+  padding-top: 40px;
+  float: right;
+  vertical-align: top;
+  font-size: 17px;
+  font-weight: 600;
+}
+ul.desktopmenu li {
+  display: inline-block;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+/*mobilmenu ausblenden*/
+div.mobilmenu {
+  display: none;
+}
+
+
+/* Mobilversion */
+@media screen and (max-width: 1103px){
+  header {
+    height: 50px;
+  }
+  #logo {
+    float: none;
+    display: block;
+    height: 70px;
+  }
+  /* Einblenden Hamburger */
+  #page-nav label {
+    display: block;
+    color: #1a1f3e;
+    background-color: #aad2ff;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    vertical-align: top;
+    float: none;
+    text-align: center;
+    margin-left:45%;
+    margin-right:45%;
+  }
+
+  #page-nav label:hover {
+    background-color: #1a1f3e;
+    color: #ff1593ff;
+  }
+ /*Ausblenden Desktopmenue*/
+ div.desktopmenu {
+    display: none;
+  }
+  #page-nav input:checked ~ div.mobilmenu {
+    border-top: 3px solid #1a1f3e;
+    display:block;
+    height: max-content;
+    position: absolute;
+    background-color: #aad2ff;
+    width: 100%;
+    visibility: visible;
+    text-align: center;
+    opacity: 1;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  }
+  .mobilmenu li {
+  list-style: none;
+  }
+  .mobilmenu li a {
+      display: block;
+      color: #1a1f3e;
+      padding: 10px 5%;
+      border-bottom: 1px solid rgba(0,0,0,.03);
+      font-size: 14px;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      font-size: 17px;
+      font-weight: 600;
+  }
+  .mobilmenu li a:hover {
+    background-color: #1a1f3e;
+    color: #ff1593ff;
+  }
+}
+
+
+
+
+
 
 /*Farben:
 /*Farben:
