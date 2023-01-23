@@ -197,8 +197,9 @@ div.mobilmenu {
   #page-nav input:checked ~ div.mobilmenu {
     border-top: 3px solid #1a1f3e;
     display:block;
-    height: max-content;
-    position: absolute;
+    --cont: max-content;
+    height:var(--cont);
+    position: relative;
     background-color: #aad2ff;
     width: 100%;
     visibility: visible;
@@ -207,6 +208,12 @@ div.mobilmenu {
     -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.1);
     -moz-box-shadow: 0 2px 5px rgba(0,0,0,.1);
     box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  }
+  header {
+    height: var(--cont)+10;
+  }
+  .mobilmenu ul{
+    padding-left: 0px;
   }
   .mobilmenu li {
   list-style: none;
@@ -228,11 +235,6 @@ div.mobilmenu {
     color: #ff1593ff;
   }
 }
-
-
-
-
-
 
 /*Farben:
 /*Farben:
