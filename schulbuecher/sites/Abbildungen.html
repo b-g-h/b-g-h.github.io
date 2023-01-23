@@ -93,7 +93,7 @@ Möchte man Verlinkungen einfügen muss man zusätzlich die Definition von <code
 Wird eine SVG Grafik in ein img-Tag eingebunden, so ist die Grafik wie jede Abbildung zu handhaben. Ein Alternativtext wird über das alt-Attribut hinzugefügt.
 Die Richtlinien aus <a href=#grundsaetzliches> "Grundsätzliches zu Grafiken"</a> sind dabei zu berücksichtigen.
 Soll die Grafik nicht weiterverarbeitet werden (Stilanpassung, Animation, Manipulation mit Javascript) so ist diese Einbindung ausreichend. Im DOM ist sie aber nicht vorhanden und kann daher nicht weiter angepasst werden.
-<br><strong>Aktuell ist dieser Weg aus Sicht der Barrierefreiheit der zuverlässigste.</strong>
+<br><strong>Aktuell ist dieser Weg aus Sicht der Barrierefreiheit der zuverlässigste. Er bietet jedoch keine Option, interaktive Elemente zu nutzen oder gezielte Anpassungen vorzunehmen.</strong>
 <h4>Option 2: inline im &lt;svg> Tag</h4>
 SVG-Code kann direkt in die html-Seite geschrieben werden. Dadurch bleiben die Funktionen von SVG erhalten und es ist derzeit die beste Möglichkeit für eine nachträgliche Manipulation.
 Die Bildbeschreibung kann dann aber nicht in ein alt-Attribut mitgegeben werden, sondern muss über ein title-Tag (kurzer Name) und über desc-Tag die Beschreibung übergeben werden.
