@@ -39,11 +39,12 @@ input {
 
 a {
   color: #ad005f;
-  text-decoration: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #ad005f;
-  border-bottom-style: solid;
+  text-decoration: underline; 
+  text-underline-offset: 5px; 
+  text-decoration-thickness: 2px;
+  text-decoration-color: #ad005f;
   line-height: 2;
+  padding: 3px;
 }
 
 a:focus {
@@ -52,8 +53,8 @@ a:focus {
   outline-style: solid;
   outline-color:#ad005f;
   outline-width: thick;
-  outline-offset: 1px;
   border-style: none;
+  text-decoration: none;
 }
 
 p {
