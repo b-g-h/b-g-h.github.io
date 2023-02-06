@@ -6,7 +6,7 @@ body {
     max-width: 120em;
 }
 header {
-  height: 100px;
+  height: 85px;
 }
 
 h1 {
@@ -43,8 +43,6 @@ a {
   text-underline-offset: 5px; 
   text-decoration-thickness: 2px;
   text-decoration-color: #ad005f;
-  line-height: 2;
-  padding: 3px;
 }
 
 a:focus {
@@ -208,7 +206,7 @@ div.mobilmenu {
     background-color: #aad2ff;
     background-image: url("img/burger.svg");
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 30px;
     background-position: center;
     font-style: normal;
     font-size: 1.2em;
