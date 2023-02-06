@@ -151,21 +151,20 @@ ul.desktopmenu {
 }
 ul.desktopmenu li {
   display: inline-block;
-  padding: 10px 15px 10px 15px;
-  background-color: #aad2ff;
-  border-style: solid;
-  border-color: #aad2ff;
-  box-sizing: border-box;
-  color: #ad005f;
+
 }
-ul.desktopmenu li:hover {
-  border-color:#ad005f;
-}
-ul.desktopmenu li:focus {
-  border-color:#ad005f;
-}
+
 ul.desktopmenu a {
   color:#1a1f3e;
+  padding: 10px 15px 10px 15px;
+  background-color: #aad2ff;
+  box-sizing: border-box;
+  border-color: #1a1f3e;
+}
+ul.desktopmenu a:hover {
+  background-color:#1a1f3e;
+  color:#ff1593ff;
+  border-color: #ff1593ff;
 }
 
 /*mobilmenu ausblenden*/
