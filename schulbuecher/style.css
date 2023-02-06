@@ -201,23 +201,32 @@ div.mobilmenu {
     height: 70px;
   }
   /* Einblenden Hamburger */
-  #page-nav label {
+  #page-nav #hamburger {
     display: block;
+    border-width: 3px;
     color: #1a1f3e;
     background-color: #aad2ff;
+    background-image: url("img/burger.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
     font-style: normal;
     font-size: 1.2em;
-    padding: 10px;
+    padding: 20px;
     float: none;
     text-align: center;
     margin-left:45%;
     margin-right:45%;
   }
 
-  #page-nav label:hover {
-    background-color: #1a1f3e;
-    color: #ff1593ff;
+  [type="checkbox"] { 
+    -webkit-appearance: none;
+    appearance: none;
+}
+  #page-nav #hamburger:focus {
+    background-color: #ad005f;
   }
+
  /*Ausblenden Desktopmenue*/
  div.desktopmenu {
     display: none;
@@ -259,6 +268,10 @@ div.mobilmenu {
       font-weight: 600;
   }
   .mobilmenu li a:hover {
+    background-color: #1a1f3e;
+    color: #ff1593ff;
+  }
+  .mobilmenu li a:focus {
     background-color: #1a1f3e;
     color: #ff1593ff;
   }
