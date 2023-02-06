@@ -143,8 +143,7 @@ header {
 /* Menu Items */
 ul.desktopmenu {
   list-style-type: none;
-  margin: 0 100px 0 0;
-  padding-top: 40px;
+  margin: 40px 5% 0 0;
   float: right;
   vertical-align: top;
   font-size: 17px;
@@ -152,13 +151,28 @@ ul.desktopmenu {
 }
 ul.desktopmenu li {
   display: inline-block;
-  padding-right: 10px;
+  padding: 10px 15px 10px 15px;
+  background-color: #aad2ff;
+  border-style: solid;
+  border-color: #aad2ff;
   box-sizing: border-box;
+  color: #ad005f;
 }
+ul.desktopmenu li:hover {
+  border-color:#ad005f;
+}
+ul.desktopmenu li:focus {
+  border-color:#ad005f;
+}
+ul.desktopmenu a {
+  color:#1a1f3e;
+}
+
 /*mobilmenu ausblenden*/
 div.mobilmenu {
   display: none;
 }
+
 
 
 /* Mobilversion */
