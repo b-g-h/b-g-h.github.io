@@ -46,6 +46,16 @@ a {
   line-height: 2;
 }
 
+a:focus {
+  color:#1a1f3e;
+  background-color: #aad2ff;
+  outline-style: solid;
+  outline-color:#ad005f;
+  outline-width: thick;
+  outline-offset: 1px;
+  border-style: none;
+}
+
 p {
   padding-left: 0.4em;
   padding-right: 0.4em;
@@ -151,17 +161,22 @@ ul.desktopmenu {
 }
 ul.desktopmenu li {
   display: inline-block;
-
 }
 
 ul.desktopmenu a {
   color:#1a1f3e;
+  margin-left: 2px;
   padding: 10px 15px 10px 15px;
   background-color: #aad2ff;
   box-sizing: border-box;
   border-color: #1a1f3e;
 }
 ul.desktopmenu a:hover {
+  background-color:#1a1f3e;
+  color:#ff1593ff;
+  border-color: #ff1593ff;
+}
+ul.desktopmenu a:focus {
   background-color:#1a1f3e;
   color:#ff1593ff;
   border-color: #ff1593ff;
