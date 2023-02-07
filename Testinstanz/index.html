@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+
+<link rel="stylesheet" href="style.css">
+    </head>
+<body>
+<div id="accordionGroup" class="accordion">
+  <h3>
+    <button type="button" aria-expanded="true" class="accordion-trigger" aria-controls="sect1" id="accordion1id">
+      <span class="accordion-title">
+        Abbildungen
+        <span class="accordion-icon"></span>
+      </span>
+    </button>
+  </h3>
+  <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel">
+        <p>
+        Das ein Absatz
+        </p>
+  </div>
+  <h3>
+    <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2" id="accordion2id">
+      <span class="accordion-title">
+        Tabellen
+        <span class="accordion-icon"></span>
+      </span>
+    </button>
+  </h3>
+  <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden="">
+    <p>das ein weiterer</p>
+  </div>
+  <h3>
+    <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3" id="accordion3id">
+      <span class="accordion-title">
+       Mathematik
+        <span class="accordion-icon"></span>
+      </span>
+    </button>
+  </h3>
+  <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion-panel" hidden="">
+    <p>noch einer</p></div>
+</div>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
