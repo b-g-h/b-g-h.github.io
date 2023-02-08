@@ -330,17 +330,17 @@ div.mobilmenu {
 .accordion-trigger:focus {
   outline: 4px solid transparent;
 }
-
+/*
 .accordion > *:first-child .accordion-trigger,
 .accordion > *:first-child {
-  /*border-radius: 5px 5px 0 0;*/
+  border-radius: 5px 5px 0 0;
 }
 
 .accordion > *:last-child .accordion-trigger,
 .accordion > *:last-child {
-  /*border-radius: 0 0 5px 5px;*/
+  border-radius: 0 0 5px 5px;
 }
-
+*/
 button {
   border-style: none;
 }
