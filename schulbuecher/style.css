@@ -372,7 +372,7 @@ button {
 
 .accordion-trigger:focus .accordion-icon,
 .accordion-trigger:hover .accordion-icon {
-  border-color: #ad005f;  
+  border-color: white;  
 }
 
 .accordion-trigger[aria-expanded="true"] .accordion-icon {
