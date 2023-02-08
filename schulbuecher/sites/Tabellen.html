@@ -34,17 +34,23 @@
   <article>
     <section class="container">
       <h1>Tabellen</h1>
+      <h2>Einsatz von Tabellen</h2>
       Tabellen sollten nur dann eingesetzt werden, wenn es sich um tabellarische Daten handelt, nicht zum Layout oder sonstige Zwecke.
       Bei einer Tabelle müssen Spalten- oder Zeilenköpfe explizit ausgezeichnet werden.
-      Bei verschachtelten Tabellen muss zusätzlich die Information für einzelne Zellen (siehe Beispiel) mitgegeben werden.
-      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced">Weiterführende Information auf der Entwicklerseite von Mozilla.</a></p>
-      <p><a href="https://www.barrierefreies-webdesign.de/knowhow/datentabellen/">Weiterführende Informationen auf der Seite von Jan Hellbusch</a></p>
-      
-      <h2>Beispiel:</h2>
+      Verschachtelte Tabellen sollen wenn möglich vermieden werden und es muss zusätzlich die Information für einzelne Zellen (siehe Beispiel) mitgegeben werden.
+      Unterschiedliche Formatierung der Zeilen (Zebra-Tabelle) erleichtert die Abgrenzung der einzelnen Zeilen.
+      <ul><li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced">Weiterführende Information auf der Entwicklerseite von Mozilla.</a><br>
+      <li><a href="https://www.barrierefreies-webdesign.de/knowhow/datentabellen/">Weiterführende Informationen auf der Seite von Jan Hellbusch</a></li>
+      <li><a href="https://www.thoughtco.com/zebra-striped-table-in-css3-3466982">Einfacher Weg mit css zur Zebra-Tabelle</a></li>
+    </li></ul>
+    <h2>rechtliche Rahmenbedingungen</h2>
+      <a href="rechtlicher-rahmen-tab.html">Bezüge zur EU-Norm</a>
+      <h2>Beispiel für eine verschachtelten Tabelle mit korrekter Auszeichnung:</h2>
       <table>
+        <caption>Das ist der Titel der Tabelle</caption>
       <tbody>
         <tr>
-          <td colspan="2" rowspan="2"></td>
+          <td colspan="2" rowspan="2">Verschiedenes</td>
           <th colspan="2" scope="colgroup">Oberkat 1</th>
           <th colspan="2" scope="colgroup">Oberkat 2</th>
         </tr>
@@ -96,6 +102,8 @@
     </table>
     </section>
     <p><a href="../index.html">zurück zur Hauptseite</a></p>
+
+
   </article>
     </main>
 </body>

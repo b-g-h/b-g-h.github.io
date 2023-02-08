@@ -389,6 +389,25 @@ button {
   display: none;
 }
 
+
+/*Tabelle*/
+table td, table th {
+padding: 0.5rem 0.75rem;
+vertical-align: middle;
+border: 3px solid black;
+}
+tr:nth-of-type(odd) {
+  background-color:#ccc;
+}
+td:nth-of-type(odd) {
+  background-color:#ffef83;
+  }
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
 /*Farben:
 /*Farben:
 #ad005f - dunkles Pink
