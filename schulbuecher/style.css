@@ -300,8 +300,8 @@ div.mobilmenu {
   border-color: #1a1f3e;
 }
 
-.accordion:focus-within h3 {
-  background-color: #f7f7f7;
+.accordion h3 {
+  background-color: #aad2ff;
 }
 
 .accordion > * + * {
@@ -322,8 +322,9 @@ div.mobilmenu {
 
 .accordion-trigger:focus,
 .accordion-trigger:hover {
-  background: #aad2ff;
+  background: #164194;
   border-color: #ad005f;
+  color: white;
 }
 
 .accordion-trigger:focus {
@@ -332,12 +333,12 @@ div.mobilmenu {
 
 .accordion > *:first-child .accordion-trigger,
 .accordion > *:first-child {
-  border-radius: 5px 5px 0 0;
+  /*border-radius: 5px 5px 0 0;*/
 }
 
 .accordion > *:last-child .accordion-trigger,
 .accordion > *:last-child {
-  border-radius: 0 0 5px 5px;
+  /*border-radius: 0 0 5px 5px;*/
 }
 
 button {
