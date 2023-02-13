@@ -302,6 +302,7 @@ div.mobilmenu {
 
 .accordion h3 {
   background-color: #aad2ff;
+  cursor: pointer;
 }
 
 .accordion > * + * {
