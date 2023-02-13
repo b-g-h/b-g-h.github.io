@@ -326,6 +326,7 @@ div.mobilmenu {
   background: #164194;
   border-color: #ad005f;
   color: white;
+  cursor: pointer;
 }
 
 .accordion-trigger:focus {
