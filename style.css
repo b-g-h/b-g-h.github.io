@@ -121,6 +121,23 @@ header {
   position: absolute;
   width: 1px;
 }
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  }
+  
+  .flex-item {
+  padding: 5px;
+  width: 400px;
+  margin-top: 10px;
+  text-align: center;
+  }
+  
 /*Farben:
 /*Farben:
 #ad005f - dunkles Pink
