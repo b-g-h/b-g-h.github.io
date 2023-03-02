@@ -73,7 +73,7 @@ button {
     font-size: 16px;
     font-weight:bold;
 }
-button:hover {
+button:hover, button:focus, button:active {
     background-color: rgb(170, 210, 255); /* Green */
     color: black;
     font-weight:bold;
@@ -138,6 +138,11 @@ header {
   text-align: center;
   }
   
+
+  input.check:enabled {
+    height: 30px;
+    width: 30px;
+  }
 /*Farben:
 /*Farben:
 #ad005f - dunkles Pink
