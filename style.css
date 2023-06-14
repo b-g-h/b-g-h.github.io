@@ -143,6 +143,12 @@ header {
     height: 30px;
     width: 30px;
   }
+  li {
+    line-height: 150%;
+  }
+  li.linehigh {
+    line-height: 250%;
+  }
 /*Farben:
 /*Farben:
 #ad005f - dunkles Pink

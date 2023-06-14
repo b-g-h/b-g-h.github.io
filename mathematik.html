@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+  <html>
+    <head>
+        <title>Beispielseite vbs Kongress 2023</title>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            extensions: ["tex2jax.js", "[a11y]/accessibility-menu.js", "AssistiveMML.js"],
+            jax: ["input/TeX", "output/SVG"],
+            menuSettings: {
+              collapsible: false,
+              autocollapse: false,
+              explorer: false
+            },
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true
+            },
+      
+            sre: {
+              locale: 'de'
+            },
+      
+            "SVG": {
+              internalSpeechTitles: true,
+              font: "STIX-Web",
+              scale:  100,
+              blacker: 5,
+             }
+          });
+        </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+        <script type="text/javascript" src="LaTeX.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+  <header>
+  <h1>Beispielseite Mathematikschrift</h1>
+  <p><button id="LTX" tabindex=0 name="LaTeX aktivieren" aria-labelledby="LaTeX aktivieren" onclick="formel()" class="BGH">LaTeX- Anzeige aktivieren</button></p>
+    </header>
+  <article>
+      <section class="container">
+        <h2>Sekundarstufe I - erste Abweichungen von der Grundlinie</h2>
+        Während in der Grundschule nur wenig Brüche behandelt werden (diese können noch gut mit der Slash-Schreibweise wie 1/2 abgedeckt werden), kommen in der Sekundarstufe I komplexe Brüche und Wurzeln hinzu. 
+        Ausdrücke wie $\frac{3x +4}{2}$ oder $\sqrt{2}$ hinzu. Diese müssen sicher gelesen und interpretiert werden.
+        <h3>Hier einige Beispielgleichungen.</h3>
+        <ol type="a">
+          <li class="linehigh"> $\frac{x^2}{6} =6$
+          <li class="linehigh"> $\sqrt{x +30}= 6 *\sqrt{x -5}$
+          <li class="linehigh"> $\frac{x^2}{2} =23,5$
+          <li class="linehigh"> $\sqrt[3]{8} =2$
+        </ol>
+        
+        
+        <h2>Sekundarstufe II</h2>
+        In der Sekundarstufe II folgen deutlich komplexere Darstellungen. Hier exemplarisch eine Aufgabenstellung aus dem Bereich der gebrochenrationalen Funktionen:
+
+        Als gebrochenrationale Funktion bezeichnet man Funktionen, die sich aus dem Quotient zweier Polynome p(x) und q(x) zusammensetzen.
+        $$f(x)=\frac{p(x)}{q(x)} =\frac{a_n x^n +... +a_2 x^2 +a_1 x +a_0}{b_m x^m +... +b_2 x^2 +b_1 x +b_0}$$
+        Betrachtet man das Schaubild einer solchen gebrochenrationalen Funktionen wie beispielsweise $f(x) = \frac{x^2 +x}{x -1}$, so erkennt man, dass sich der Graph in den Randbereichen immer mehr einer Geraden annähert.
+        Diese Geraden nennt man Asymptote. 
+        
+
+        <h3>Bestimmen Sie die Gleichung der Asymptoten</h3>
+        <ol type="a">
+          <li class="linehigh">$f(x) =\frac{2x^2 +x +1}{x -1}$</li>
+          <li class="linehigh">$f(x) =\frac{8x^2 -x^3}{2x^2 -2}$</li>
+          <li class="linehigh">$f(x) =\frac{4x^2 -3x}{2x^2 -2}$</li>
+          <li class="linehigh">$f(x) =\frac{3x^4 +6x}{3 +3x^2}$</li>
+        </ol>
+        <h3>Summen- und Produktdarstellung</h3>
+        $$\sum\limits_{k =1}^4 k =1 +2 +3 +4$$
+        $$\prod\limits_{k =1}^4 k =1 *2 *3 *4$$
+        <h3>Binomialkoeffizient</h3>
+        $${n \choose k} =\frac{n!}{(n -k)! *k!}$$
+        <h3>Matrizen</h3>
+        $$\begin{pmatrix} a&b&c \\ d&e&f \end{pmatrix}$$
+      </section>
+  </article>
+</body>
+
+</html>
