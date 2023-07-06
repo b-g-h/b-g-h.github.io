@@ -22,7 +22,7 @@ function wechsel()
     var bild = document.getElementById("sport");
     var qu = bild.getAttribute("src");
 
-    if (qu == "img/sport-1.png") {
+    if (qu == "img/sport-1.png") { 
         bild.setAttribute("src", "img/sport-2.png");
         bild.setAttribute("alt", "farbige Version des Fotos");
     }

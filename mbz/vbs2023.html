@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Vortrag Schulbücher vbs Kongress 2023</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/sport.js"></script>
+    <script type="text/javascript" src="js/bar.js"></script>
+</head>
+<section class="container"><h2>mehrere Ebenen</h2>
+    <p><img id="sport" src="img/sport-1.png" alt="Originalfoto schwarz weiß, Handballtorwart in Abwehrhaltung, Ball fliegt auf ihn zu" width="100%"></p>
+    <button onclick="wechsel()">weitere Darstellungen</button> <button onclick="original()">Original</button> <button onclick="wechsel1()">farbig</button> <button onclick="wechsel2()">freigestellt</button> 
+</section>
+    <section class="container"><h2>3D-Darstellungen</h2>
+    <iframe src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen"></iframe> <br>
+    <a href="https://tactiles.eu">mehr unter tactiles.eu</a>
+</section>
+<section class="container"><h2>Interaktive Inhalte</h2>
+    <h3>Memory</h3>
+    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=2" style=".pojo-a11y-toolbar-toggle {display: none;}" width="958" height="212" frameborder="0" allowfullscreen="allowfullscreen" title="Memory"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+    <h3>Kreuzworträtsel</h3>
+    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="958" height="1020" frameborder="0" allowfullscreen="allowfullscreen" title="Example Crossword"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+</section>
+<section class="container"><h2>SVG</h2>
+    <button onclick="farblos()">farblose Version</button>  <button onclick="stroke()">Umrandung</button> <button onclick="stroke2()">noch dicker</button>
+    <svg lang="de" id="screen-reader-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 325" preserveAspectRatio="xMinYMin slice" role="group"
+         aria-labelledby="Säulendiagramm Screenreadernutzung" aria-describedby="Verteilung weltweit">
+      <text id="graph-title" class="title" transform="translate(10 28.77)">Screenreadernutzung</text>
+      <text id="graph-desc" class="desc" transform="translate(10 317.96)">Die Daten und das Originalbild stammen von <a class="svg" xlink:href="http://webaim.org/projects/screenreadersurvey6/#used">WebAIM's Screen Reader User Survey #6 Results</a></text>
+      
+        <pattern id="pattern-circles" 
+            x="0" 
+            y="0" 
+            width="5" 
+            height="5" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <circle id="pattern-circle" cx="2" cy="2" r="2" fill= "black" />
+        </pattern>
+        <pattern id="pattern-checkers" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+            <rect class="checker" x="0" width="5" height="5" y="0"></rect>
+            <rect class="checker" x="5" width="5" height="5" y="5"></rect>
+        </pattern>
+        <pattern id="pattern-hex" x="0" y="0" width="14" height="23" patternUnits="userSpaceOnUse" viewBox="56 -254 112 190">
+            <g id="hexagon">
+            <path d="M168-127.1c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2L169.3-0.3
+          c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5C167-127,167.5-127.1,168-127.1
+          L168-127.1z"/>
+            <path d="M112-222.5c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2l-53.4,30.5
+          c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5
+          C111-222.4,111.5-222.5,112-222.5L112-222.5z"/>
+            <path d="M168-317.8c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2L169.3-191
+          c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5
+          C167-317.7,167.5-317.8,168-317.8L168-317.8z"/>
+            </g>
+        </pattern>
+        <pattern id="pattern-cubes" x="0" y="126" patternUnits="userSpaceOnUse" width="15" height="25" viewBox="0 0 10 16"> 
+            <g id="cube">
+            <path class="left-shade" d="M0 0l5 3v5l-5 -3z" />
+            <path class="right-shade" d="M10 0l-5 3v5l5 -3" />
+            </g>
+            <use x="5" y="8" xlink:href="#cube" />
+            <use x="-5" y="8" xlink:href="#cube" />  
+        </pattern>
+        <pattern id="pattern-chevron" x="0" y="0" patternUnits="userSpaceOnUse" width="12" height="22" viewBox="0 0 10 18"> 
+            <g id="chevron">
+              <path class="left" d="M0 0l5 3v5l-5 -3z" />
+              <path class="right" d="M10 0l-5 3v5l5 -3" />
+            </g>
+            <use x="0" y="9" xlink:href="#chevron" />     
+        </pattern>
+        <pattern id="pattern-lines" x="0" y="0" width="5" height="6" patternUnits="userSpaceOnUse" >
+            <rect class="lines" x="0" width="5" height="3" y="0"/>
+        </pattern>
+
+        <g id="bars" role="list" aria-label="Säulen" transform="translate(0,58)">
+                  
+        <g id="Jaws" role="listitem">
+          <rect role="presentation" id="bar" class="cls-1" x="47.95" y="80.54" width="25.54" height="148.61" transform="translate(-7.92 -9.3) rotate(-0.08)"  fill="#df0000" />
+          <rect role="presentation" id="key" class="cls-1" x="328.66" y="30.44" width="17.96" height="19.39" transform="translate(-7.75 -8.91) rotate(-0.08)" fill="#df0000"/>
+          <text class="cls-2" transform="translate(345.49 36.45)">Jaws - 44%</text>
+        </g>
+        <g id="NVDA" role="listitem">
+          <rect role="presentation" id="bar-2" data-name="bar" class="cls-3" x="77.83" y="92.54" width="25.44" height="136.57" transform="translate(-7.93 -9.26) rotate(-0.08)" fill="#24c62b"/>
+          <rect role="presentation" id="key-2" data-name="key" class="cls-3" x="328.68" y="57.11" width="17.96" height="19.39" transform="translate(-7.79 -8.91) rotate(-0.08)" fill="#24c62b"/>
+          <text class="cls-2" transform="translate(345.49 63.12)">NVDA - 41%</text>
+        </g>
+        <g id="VoiceOver" role="listitem">
+          <rect role="presentation" id="bar-3" data-name="bar" class="cls-4" x="107.63" y="122.84" width="25.44" height="106.23" transform="translate(-7.95 -9.22) rotate(-0.08)" fill="#1010b2"/>
+          <rect role="presentation" id="key-3" data-name="key" class="cls-4" x="328.7" y="82.38" width="17.96" height="19.39" transform="translate(-7.83 -8.91) rotate(-0.08)" fill="#1010b2"/>
+          <text class="cls-2" transform="translate(345.49 88.39)">VoiceOver - 31%</text>
+        </g>
+        <g id="WindowEyes" role="listitem">
+          <rect role="presentation" id="bar-4" class="cls-5" x="137.41" y="128.08" width="25.44" height="100.96" transform="translate(-7.95 -9.17) rotate(-0.08)" fill="#e29e14"/>
+          <rect role="presentation" id="key-4" class="cls-5" x="328.72" y="107.64" width="17.96" height="19.39" transform="translate(-7.86 -8.91) rotate(-0.08)" fill="#e29e14"/>
+          <text class="cls-2" transform="translate(345.49 113.65)">Window-Eyes - 30%</text>
+        </g>
+        <g id="ZoomText" role="listitem">
+          <rect role="presentation" id="bar-5" class="cls-6" x="167.19" y="137" width="25.44" height="91.99" transform="translate(-7.96 -9.13) rotate(-0.08)" fill="#7d11c9"/>
+          <rect role="presentation" id="key-5" class="cls-6" x="328.73" y="132.91" width="17.96" height="19.39" transform="translate(-7.9 -8.91) rotate(-0.08)" fill="#7d11c9"/>
+          <text class="cls-2" transform="translate(345.49 138.92)">ZoomText - 28%</text>
+        </g>
+        <g id="SA" role="listitem">
+          <rect role="presentation" id="bar-6" class="cls-8" x="196.14" y="204.92" width="25.44" height="24.11" transform="translate(-8 -9.09) rotate(-0.08)" fill="#f0f"/>
+          <rect role="presentation" id="key-6" class="cls-8" x="328.75" y="159.58" width="17.96" height="19.39" transform="translate(-7.94 -8.91) rotate(-0.08)" fill="#f0f"/>
+          <text class="cls-2" transform="translate(345.49 165.59)">SA oder SAToGo - 7%</text>
+        </g>
+        <g id="ChromeVox" role="listitem">
+          <rect role="presentation" id="bar-7" data-name="bar" class="cls-9" x="226.05" y="218.33" width="25.44" height="10.69" transform="translate(-8.01 -9.05) rotate(-0.08)" fill="#065109"/>
+          <rect role="presentation" id="key-7" data-name="key" class="cls-9" x="328.77" y="184.84" width="17.96" height="19.39" transform="matrix(1, 0, 0, 1, -7.97, -8.91)" fill="#065109"/>
+          <text class="cls-2" transform="translate(345.49 190.86)">ChromeVox - 3%</text>
+        </g>
+        <g id="Weitere" role="listitem">
+          <rect role="presentation" id="bar-8" data-name="bar" class="cls-10" x="255.94" y="204.91" width="25.44" height="24.11" transform="translate(-8 -9.01) rotate(-0.08)" fill="#06b7f4"/>
+          <rect role="presentation" id="key-8" data-name="key" class="cls-10" x="328.79" y="210.11" width="17.96" height="19.39" transform="translate(-8.01 -8.91) rotate(-0.08)" fill="#06b7f4"/>
+          <text class="cls-2" transform="translate(345.49 216.12)">Weitere - 7%</text>
+        </g>
+
+      </g>
+      <g id="xy-axis" role="presentation">
+        <line role="presentation" id="y-axis" class="cls-11" x1="39" y1="58.32" x2="39" y2="279.52"/>
+        <line role="presentation" id="bottom-line" class="cls-11" x1="283.4" y1="279.02" x2="32.4" y2="279.02"/>
+        <line role="presentation" id="_50_" class="cls-12" x1="32.5" y1="106.42" x2="39" y2="106.42"/>
+        <line role="presentation" id="_25_" class="cls-12" x1="32.5" y1="190.42" x2="39" y2="190.42"/>
+        <text role="presentation" aria-hidden="true" class="cls-13" transform="translate(0 109.92)"> 50%</text>
+        <text role="presentation" aria-hidden="true" class="cls-13" transform="translate(0 193.92)"> 25%</text>
+        <text role="presentation" aria-hidden="true" class="cls-13" transform="translate(0 282)">    0%</text>
+      </g>
+
+
+    </svg>
+</section>
+</html>
