@@ -21,8 +21,8 @@
     <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="958" height="1020" frameborder="0" allowfullscreen="allowfullscreen" title="Example Crossword"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 </section>
 <section class="container"><h2>SVG</h2>
-    <button onclick="farblos()">farblose Version</button>  <button onclick="stroke()">Umrandung</button> <button onclick="stroke2()">noch dicker</button>
-    <svg lang="de" id="screen-reader-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 325" preserveAspectRatio="xMinYMin slice" role="group"
+    <button onclick="farblos()">Farbumschaltung</button>  <button onclick="stroke()">Umrandung</button>
+    <svg lang="de" id="screen-reader-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 325" preserveAspectRatio="xMinYMin slice" role="group"
          aria-labelledby="Säulendiagramm Screenreadernutzung" aria-describedby="Verteilung weltweit">
       <text id="graph-title" class="title" transform="translate(10 28.77)">Screenreadernutzung</text>
       <text id="graph-desc" class="desc" transform="translate(10 317.96)">Die Daten und das Originalbild stammen von <a class="svg" xlink:href="http://webaim.org/projects/screenreadersurvey6/#used">WebAIM's Screen Reader User Survey #6 Results</a></text>
@@ -73,8 +73,8 @@
         <g id="bars" role="list" aria-label="Säulen" transform="translate(0,58)">
                   
         <g id="Jaws" role="listitem">
-          <rect role="presentation" id="bar" class="cls-1" x="47.95" y="80.54" width="25.54" height="148.61" transform="translate(-7.92 -9.3) rotate(-0.08)"  fill="#df0000" />
-          <rect role="presentation" id="key" class="cls-1" x="328.66" y="30.44" width="17.96" height="19.39" transform="translate(-7.75 -8.91) rotate(-0.08)" fill="#df0000"/>
+          <rect role="presentation" id="bar-1" class="cls-1" x="47.95" y="80.54" width="25.54" height="148.61" transform="translate(-7.92 -9.3) rotate(-0.08)"  fill="#df0000" />
+          <rect role="presentation" id="key-1" class="cls-1" x="328.66" y="30.44" width="17.96" height="19.39" transform="translate(-7.75 -8.91) rotate(-0.08)" fill="#df0000"/>
           <text class="cls-2" transform="translate(345.49 36.45)">Jaws - 44%</text>
         </g>
         <g id="NVDA" role="listitem">
@@ -97,10 +97,9 @@
           <rect role="presentation" id="key-5" class="cls-6" x="328.73" y="132.91" width="17.96" height="19.39" transform="translate(-7.9 -8.91) rotate(-0.08)" fill="#7d11c9"/>
           <text class="cls-2" transform="translate(345.49 138.92)">ZoomText - 28%</text>
         </g>
-        <g id="SA" role="listitem">
-          <rect role="presentation" id="bar-6" class="cls-8" x="196.14" y="204.92" width="25.44" height="24.11" transform="translate(-8 -9.09) rotate(-0.08)" fill="#f0f"/>
+        <g id="SA" role="listitem">          <rect role="presentation" id="bar-6" class="cls-8" x="196.14" y="204.92" width="25.44" height="24.11" transform="translate(-8 -9.09) rotate(-0.08)" fill="#f0f"/>
           <rect role="presentation" id="key-6" class="cls-8" x="328.75" y="159.58" width="17.96" height="19.39" transform="translate(-7.94 -8.91) rotate(-0.08)" fill="#f0f"/>
-          <text class="cls-2" transform="translate(345.49 165.59)">SA oder SAToGo - 7%</text>
+          <text class="cls-2" transform="translate(345.49 165.59)">SA/SAToGo - 7%</text>
         </g>
         <g id="ChromeVox" role="listitem">
           <rect role="presentation" id="bar-7" data-name="bar" class="cls-9" x="226.05" y="218.33" width="25.44" height="10.69" transform="translate(-8.01 -9.05) rotate(-0.08)" fill="#065109"/>
@@ -119,9 +118,9 @@
         <line role="presentation" id="bottom-line" class="cls-11" x1="283.4" y1="279.02" x2="32.4" y2="279.02"/>
         <line role="presentation" id="_50_" class="cls-12" x1="32.5" y1="106.42" x2="39" y2="106.42"/>
         <line role="presentation" id="_25_" class="cls-12" x1="32.5" y1="190.42" x2="39" y2="190.42"/>
-        <text role="presentation" aria-hidden="true" class="cls-13" transform="translate(0 109.92)"> 50%</text>
-        <text role="presentation" aria-hidden="true" class="cls-13" transform="translate(0 193.92)"> 25%</text>
-        <text role="presentation" aria-hidden="true" class="cls-13" transform="translate(0 282)">    0%</text>
+        <text role="presentation" aria-hidden="true" class="cls-2" transform="translate(0 109.92)"> 50%</text>
+        <text role="presentation" aria-hidden="true" class="cls-2" transform="translate(0 193.92)"> 25%</text>
+        <text role="presentation" aria-hidden="true" class="cls-2" transform="translate(0 282)">    0%</text>
       </g>
 
 
