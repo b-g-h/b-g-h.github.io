@@ -18,8 +18,17 @@ function farblos()
 function stroke()
 {
     var strokeString = "stroke-width:2;stroke:black"
-    for(let i=1; i<9; i++){
-        document.getElementById("bar-"+i).setAttribute("style", strokeString);
-        document.getElementById("key-"+i).setAttribute("style", strokeString);
+    if(document.getElementById("bar-1").getAttribute("style") != strokeString){
+        for(let i=1; i<9; i++){
+            document.getElementById("bar-"+i).setAttribute("style", strokeString);
+            document.getElementById("key-"+i).setAttribute("style", strokeString);
+            }
     }
+    else{
+        for(let i=1; i<9; i++){
+            document.getElementById("bar-"+i).setAttribute("style", "");
+            document.getElementById("key-"+i).setAttribute("style", "");
+            }
+    }
+
 }
