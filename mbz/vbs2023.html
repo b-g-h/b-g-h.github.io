@@ -6,69 +6,23 @@
     <script type="text/javascript" src="js/sport.js"></script>
     <script type="text/javascript" src="js/bar.js"></script>
 </head>
+<body>
 <section class="container"><h2>mehrere Ebenen</h2>
     <p><img id="sport" src="img/sport-1.png" alt="Originalfoto schwarz weiß, Handballtorwart in Abwehrhaltung, Ball fliegt auf ihn zu" width="100%"></p>
     <button onclick="wechsel()">weitere Darstellungen</button> <button onclick="original()">Original</button> <button onclick="wechsel1()">farbig</button> <button onclick="wechsel2()">freigestellt</button> 
 </section>
-    <section class="container"><h2>3D-Darstellungen</h2>
-    <iframe src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen"></iframe> <br>
+<section class="container"><h2>3D-Darstellungen</h2>
+    <iframe name="iframe1" id="iframe1" src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br>
+    <button onclick=window.location.href="https://tactiles.eu/wp-content/uploads/2023/07/RS-2020-P3-preview-not-for-printing.3mf">Download Modell</button></br>
     <a href="https://tactiles.eu">mehr unter tactiles.eu</a>
 </section>
-<section class="container"><h2>Interaktive Inhalte</h2>
-    <h3>Memory</h3>
-    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=2" style=".pojo-a11y-toolbar-toggle {display: none;}" width="958" height="212" frameborder="0" allowfullscreen="allowfullscreen" title="Memory"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-    <h3>Kreuzworträtsel</h3>
-    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="958" height="1020" frameborder="0" allowfullscreen="allowfullscreen" title="Example Crossword"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-</section>
+
 <section class="container"><h2>SVG</h2>
     <button onclick="farblos()">Farbumschaltung</button>  <button onclick="stroke()">Umrandung</button>
     <svg lang="de" id="screen-reader-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 325" preserveAspectRatio="xMinYMin slice" role="group"
          aria-labelledby="Säulendiagramm Screenreadernutzung" aria-describedby="Verteilung weltweit">
       <text id="graph-title" class="title" transform="translate(10 28.77)">Screenreadernutzung</text>
       <text id="graph-desc" class="desc" transform="translate(10 317.96)">Die Daten und das Originalbild stammen von <a class="svg" xlink:href="http://webaim.org/projects/screenreadersurvey6/#used">WebAIM's Screen Reader User Survey #6 Results</a></text>
-      
-        <pattern id="pattern-circles" 
-            x="0" 
-            y="0" 
-            width="5" 
-            height="5" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
-            <circle id="pattern-circle" cx="2" cy="2" r="2" fill= "black" />
-        </pattern>
-        <pattern id="pattern-checkers" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-            <rect class="checker" x="0" width="5" height="5" y="0"></rect>
-            <rect class="checker" x="5" width="5" height="5" y="5"></rect>
-        </pattern>
-        <pattern id="pattern-hex" x="0" y="0" width="14" height="23" patternUnits="userSpaceOnUse" viewBox="56 -254 112 190">
-            <g id="hexagon">
-            <path d="M168-127.1c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2L169.3-0.3
-          c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5C167-127,167.5-127.1,168-127.1
-          L168-127.1z"/>
-            <path d="M112-222.5c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2l-53.4,30.5
-          c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5
-          C111-222.4,111.5-222.5,112-222.5L112-222.5z"/>
-            <path d="M168-317.8c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2L169.3-191
-          c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5
-          C167-317.7,167.5-317.8,168-317.8L168-317.8z"/>
-            </g>
-        </pattern>
-        <pattern id="pattern-cubes" x="0" y="126" patternUnits="userSpaceOnUse" width="15" height="25" viewBox="0 0 10 16"> 
-            <g id="cube">
-            <path class="left-shade" d="M0 0l5 3v5l-5 -3z" />
-            <path class="right-shade" d="M10 0l-5 3v5l5 -3" />
-            </g>
-            <use x="5" y="8" xlink:href="#cube" />
-            <use x="-5" y="8" xlink:href="#cube" />  
-        </pattern>
-        <pattern id="pattern-chevron" x="0" y="0" patternUnits="userSpaceOnUse" width="12" height="22" viewBox="0 0 10 18"> 
-            <g id="chevron">
-              <path class="left" d="M0 0l5 3v5l-5 -3z" />
-              <path class="right" d="M10 0l-5 3v5l5 -3" />
-            </g>
-            <use x="0" y="9" xlink:href="#chevron" />     
-        </pattern>
-        <pattern id="pattern-lines" x="0" y="0" width="5" height="6" patternUnits="userSpaceOnUse" >
-            <rect class="lines" x="0" width="5" height="3" y="0"/>
-        </pattern>
 
         <g id="bars" role="list" aria-label="Säulen" transform="translate(0,58)">
                   
@@ -122,8 +76,42 @@
         <text role="presentation" aria-hidden="true" class="cls-2" transform="translate(0 193.92)"> 25%</text>
         <text role="presentation" aria-hidden="true" class="cls-2" transform="translate(0 282)">    0%</text>
       </g>
-
-
+      <pattern id="pattern-circles" role="presentation"
+            x="0" 
+            y="0" 
+            width="5" 
+            height="5" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <circle id="pattern-circle" cx="2" cy="2" r="2" fill= "black" />
+        </pattern>
+        <pattern id="pattern-checkers" role="presentation" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+            <rect class="checker" x="0" width="5" height="5" y="0"></rect>
+            <rect class="checker" x="5" width="5" height="5" y="5"></rect>
+        </pattern>
+        <pattern id="pattern-cubes" role="presentation" x="0" y="126" patternUnits="userSpaceOnUse" width="15" height="25" viewBox="0 0 10 16"> 
+            <g id="cube">
+            <path class="left-shade" d="M0 0l5 3v5l-5 -3z" />
+            <path class="right-shade" d="M10 0l-5 3v5l5 -3" />
+            </g>
+            <use x="5" y="8" xlink:href="#cube" />
+            <use x="-5" y="8" xlink:href="#cube" />  
+        </pattern>
+        <pattern id="pattern-chevron" role="presentation" x="0" y="0" patternUnits="userSpaceOnUse" width="12" height="22" viewBox="0 0 10 18"> 
+            <g id="chevron">
+              <path class="left" d="M0 0l5 3v5l-5 -3z" />
+              <path class="right" d="M10 0l-5 3v5l5 -3" />
+            </g>
+            <use x="0" y="9" xlink:href="#chevron" />     
+        </pattern>
+        <pattern id="pattern-lines" role="presentation" x="0" y="0" width="5" height="6" patternUnits="userSpaceOnUse" >
+            <rect class="lines" x="0" width="5" height="3" y="0"/>
+        </pattern>
     </svg>
 </section>
+<section class="container"><h2>Interaktive Inhalte</h2>
+    <h3>Memory</h3>
+    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=2" style=".pojo-a11y-toolbar-toggle {display: none;}" width="958" height="212" frameborder="0" allowfullscreen="allowfullscreen" title="Memory"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+    <h3>Kreuzworträtsel</h3>
+    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="958" height="1020" frameborder="0" allowfullscreen="allowfullscreen" title="Example Crossword"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+</section>
+</body>
 </html>
