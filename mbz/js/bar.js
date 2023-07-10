@@ -8,11 +8,13 @@ function farblos()
             document.getElementById("bar-"+i).setAttribute("fill", pattern2[i-1]);
             document.getElementById("key-"+i).setAttribute("fill", pattern2[i-1]);
         }
+        document.getElementById("farbe").innerHTML = "farbig";
     } else {
         for(let i=1; i<9; i++){
             document.getElementById("bar-"+i).setAttribute("fill", pattern1[i-1]);
             document.getElementById("key-"+i).setAttribute("fill", pattern1[i-1]);
         }
+        document.getElementById("farbe").innerHTML = "ohne Farbe";
     }
 }
 function stroke()
@@ -23,12 +25,14 @@ function stroke()
             document.getElementById("bar-"+i).setAttribute("style", strokeString);
             document.getElementById("key-"+i).setAttribute("style", strokeString);
             }
+            document.getElementById("rand").innerHTML = "ohne Rand";
     }
     else{
         for(let i=1; i<9; i++){
             document.getElementById("bar-"+i).setAttribute("style", "");
             document.getElementById("key-"+i).setAttribute("style", "");
-            }
+            };
+            document.getElementById("rand").innerHTML = "mit Rand";
     }
 
 }

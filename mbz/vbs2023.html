@@ -9,16 +9,17 @@
 <body>
 <section class="container"><h2>mehrere Ebenen</h2>
     <p><img id="sport" src="img/sport-1.png" alt="Originalfoto schwarz weiß, Handballtorwart in Abwehrhaltung, Ball fliegt auf ihn zu" width="100%"></p>
-    <button onclick="original()">Original</button> <button onclick="wechsel1()">farbig</button> <button onclick="wechsel2()">freigestellt</button> 
+    <button id="sport_ori" onclick="original()" aria-pressed="true">Original</button> <button id="sport_1" onclick="wechsel1()" aria-pressed="false">farbig</button> <button id="sport_2" aria-pressed="false" onclick="wechsel2()">freigestellt</button> 
 </section>
 <section class="container"><h2>3D-Darstellungen</h2>
-    <iframe name="iframe1" id="iframe1" src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br>
-    <button onclick=window.location.href="https://tactiles.eu/wp-content/uploads/2023/07/RS-2020-P3-preview-not-for-printing.3mf">Download Modell</button></br>
+    <iframe name="iframe1" id="iframe1" src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen" aria-label="3D-Canvas mit einer zusammengesetzten Figur (Kegel und Zylinder), Vorlage für den 3D-Druck"></iframe><br> 
+  <button onclick=window.location.href="https://tactiles.eu/wp-content/uploads/2023/07/RS-2020-P3-preview-not-for-printing.3mf">Download Modell</button></br>
     <a href="https://tactiles.eu">weitere Modelle unter tactiles.eu</a>
 </section>
 
 <section class="container"><h2>Abbildungen</h2>
-    <button onclick="farblos()">Farbumschaltung</button>  <button onclick="stroke()">Umrandung</button>
+  <h3>Balkendiagramm</h3>
+    <button id="farbe" onclick="farblos()">ohne Farbe</button>  <button id="rand" onclick="stroke()">mit Rand</button>
     <svg lang="de" id="screen-reader-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 325" preserveAspectRatio="xMinYMin slice" role="group"
          aria-labelledby="Säulendiagramm Screenreadernutzung" aria-describedby="Verteilung weltweit">
       <text id="graph-title" class="title" transform="translate(10 28.77)">Screenreadernutzung</text>
@@ -106,12 +107,16 @@
             <rect class="lines" x="0" width="5" height="3" y="0"/>
         </pattern>
     </svg>
+    <h3>Funktionen mit dem Arithmico</h3>
+    <a href="https://arithmico.com/">Link Arithmico</a>
+         <iframe src="https://arithmico.com/" height="500" width="100%"  frameborder="0" allowfullscreen="allowfullscreen" title="Arithmico"></iframe>
 </section>
 <section class="container"><h2>Interaktive Inhalte</h2>
-    <h3>Memory</h3>
-    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=2" style=".pojo-a11y-toolbar-toggle {display: none;}" width="958" height="212" frameborder="0" allowfullscreen="allowfullscreen" title="Memory"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+    <h3>Bilderauswahl</h3>
+    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=5" width="958" height="1272" frameborder="0" allowfullscreen="allowfullscreen" title="Bildauswahl"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
     <h3>Kreuzworträtsel</h3>
     <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="958" height="1020" frameborder="0" allowfullscreen="allowfullscreen" title="Example Crossword"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 </section>
 </body>
 </html>
+
