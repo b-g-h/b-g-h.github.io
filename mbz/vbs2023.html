@@ -40,12 +40,15 @@
     <script type="text/javascript" src="js/bar.js"></script>
 </head>
 <body>
-  <h1 style="text-align: center;">Das Schulbuch der Zukunft - vbs Kongress 2023</h1>
+  <header>
+    <img di="header" src="img/vbs-logo.svg" alt="vbs-Logo mit Zusatz Kongress 2023 Marburg">
+  </header>
+  <main><h1 style="text-align: center;">Das Schulbuch der Zukunft</h1>
   <section class="container">
     <h2>Mathematikschrift</h2>
     <h3>Bruchgleichungen</h3> 
     <p style="margin-bottom: 50vh; margin-top: 1vh; font-size: 46px; line-height: 200%;">Bruch x plus 4 Bruchstrich x Ende Bruch ist gleich Bruch 16 Bruchstrich x Quadrat minus 4x Ende Bruch minus Bruch 4 Bruchstrich x minus 4 Ende Bruch</p>
-    <h2>Fazit: so ist Mathematik nicht möglich!</h2> 
+    <h2>So ist Mathematik nicht möglich!</h2> 
     Eine schriftliche Repräsentation ist zwingend erforderlich.
     $$\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$$
     <h2 style="margin-top: 20vh;">LaTeX als Mathematikschrift</h2>
@@ -62,14 +65,14 @@
     <p style="box-sizing: border-box;">
         <img src="img/Abbildung_M.png" style="padding-right: 50px;" alt="erster Quadrant, zwei Kurven Kg und Kh, welche im Ursprung beginnen und sich bei (4|4) schneiden. Die Kurven sind achsensymmetrisch zur Geraden f(x) =x, Kh liegt bis zum Schnittpunkt über Kg." width="320px">
         <img src="img/Abbildung_M.svg" alt="erster Quadrant, zwei Kurven Kg und Kh, welche im Ursprung beginnen und sich bei (4|4) schneiden. Die Kurven sind achsensymmetrisch zur Geraden f(x) =x, Kh liegt bis zum Schnittpunkt über Kg." width="320px"> </p>
-    <h3>Alternativen zur Ergänzung</h2>
-    <p>Abbildung als taktile Vorlage</p>
+    <h3>Alternativen als Ergänzung</h2>
+    <h4>Abbildung als taktile Vorlage</h4>
     <img src="img/Abbildung2_M.svg" alt="Vorlage für den Ausdruck auf Schwellpapier" width="640px"> </p>
-    <h3>unterschiedliche Darstellungen</h3>
+    <h4>Unterschiedliche Darstellungen</h4>
     <p><img id="sport" src="img/sport-1.png" alt="Originalfoto schwarz weiß, Handballtorwart in Abwehrhaltung, Ball fliegt auf ihn zu" width="100%"></p>
     <button id="sport_ori" onclick="original()" aria-pressed="true">Original</button> <button id="sport_1" onclick="wechsel1()" aria-pressed="false">farbig</button> <button id="sport_2" aria-pressed="false" onclick="wechsel2()">freigestellt</button> 
   </section>
-  <section class="container"><h3>Balkendiagramm</h3>
+  <section class="container"><h3>Säulendiagramm</h3>
     <button id="farbe" onclick="farblos()">ohne Farbe</button>  <button id="rand" onclick="stroke()">mit Rand</button>
     <svg lang="de" id="screen-reader-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 325" preserveAspectRatio="xMinYMin slice" role="group"
          aria-labelledby="Säulendiagramm Screenreadernutzung" aria-describedby="Verteilung weltweit">
@@ -159,9 +162,11 @@
         </pattern>
     </svg>
     </section>
-    <section class="container"><h3>Funktionen mit dem Arithmico</h3>
-    <a href="https://arithmico.com/">Link Arithmico</a>
-         <iframe src="https://arithmico.com/" height="500" width="100%"  frameborder="0" allowfullscreen="allowfullscreen" title="Arithmico"></iframe>
+    <section class="container"><h3>Verschiedene Ausgaben</h3>
+    <a href="https://arithmico.com/">zum Arithmico</a>
+    <img src="img/arithmico.jpg" alt="Screenshot der Oberfläche des Arithmicos">
+         <!--<iframe src="https://arithmico.com/" sandbox="" height="500" width="100%"  frameborder="0" allowfullscreen="allowfullscreen" title="Arithmico"></iframe> -->
+         <p>Mehr zum Thema Barrierefreie Mathematik auf Webseiten mit Mathjax am Dienstag um mit Ulrich Kalina </p>
         </section>
 <section class="container"><h2>3D-Darstellungen</h2>
   <iframe name="iframe1" id="iframe1" src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen" aria-label="3D-Canvas mit einer zusammengesetzten Figur (Kegel und Zylinder), Vorlage für den 3D-Druck"></iframe><br> 
@@ -175,6 +180,7 @@
     <h3>Kreuzworträtsel</h3>
     <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="958" height="1020" frameborder="0" allowfullscreen="allowfullscreen" title="Example Crossword"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 </section>
+</main>
 </body>
 </html>
 
