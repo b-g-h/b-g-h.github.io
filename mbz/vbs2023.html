@@ -3,12 +3,68 @@
 <head>
     <title>Vortrag Schulbücher vbs Kongress 2023</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "[a11y]/accessibility-menu.js", "AssistiveMML.js"],
+        jax: ["input/TeX", "output/SVG"],
+        menuSettings: {
+          collapsible: false,
+          autocollapse: false,
+          explorer: false
+        },
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+  
+        sre: {
+          locale: 'de'
+        },
+  
+        "SVG": {
+          internalSpeechTitles: true,
+          font: "STIX-Web",
+          scale:  150,
+          blacker: 5,
+         }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+    <script type="text/javascript" src="js/LaTeX.js"></script>
     <script type="text/javascript" src="js/sport.js"></script>
     <script type="text/javascript" src="js/bar.js"></script>
 </head>
 <body>
+  <h1 style="text-align: center;">Das Schulbuch der Zukunft - vbs Kongress 2023</h1>
+  <section class="container">
+    <h2>Mathematikschrift</h2>
+    <h3>Bruchgleichungen</h3> 
+    <p style="margin-bottom: 50vh; margin-top: 1vh; font-size: 46px; line-height: 200%;">Bruch x plus 4 Bruchstrich x Ende Bruch ist gleich Bruch 16 Bruchstrich x Quadrat minus 4x Ende Bruch minus Bruch 4 Bruchstrich x minus 4 Ende Bruch</p>
+    <h2>Fazit: so ist Mathematik nicht möglich!</h2> 
+    Eine schriftliche Repräsentation ist zwingend erforderlich.
+    $$\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$$
+    <h2 style="margin-top: 20vh;">LaTeX als Mathematikschrift</h2>
+    <p>\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}</p>
+    <p><img src="img/bruchgleichung.jpg" alt="Abbildung von \frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4} in Brailleschrift" width="100%"> </p>
+
+    <p><button id="LTX" tabindex=0 name="LaTeX aktivieren" aria-labelledby="LaTeX aktivieren" onclick="formel()" class="BGH">LaTeX- Anzeige aktivieren</button></p>
+    <p>Mehr zum Thema Barrierefreie Mathematik auf Webseiten mit Mathjax am Mittwoch um 11.00 Uhr im Bielschowsky-Konferenzraum mit Prof. Dr. Volker Sorge </p>    
+  </section>
+  
   <section class="container">
     <h2>Abbildungen</h2>
+    <h3>Vektorgrafik vs Pixelgrafik</h3>
+    <p style="box-sizing: border-box;">
+        <img src="img/Abbildung_M.png" style="padding-right: 50px;" alt="erster Quadrant, zwei Kurven Kg und Kh, welche im Ursprung beginnen und sich bei (4|4) schneiden. Die Kurven sind achsensymmetrisch zur Geraden f(x) =x, Kh liegt bis zum Schnittpunkt über Kg." width="320px">
+        <img src="img/Abbildung_M.svg" alt="erster Quadrant, zwei Kurven Kg und Kh, welche im Ursprung beginnen und sich bei (4|4) schneiden. Die Kurven sind achsensymmetrisch zur Geraden f(x) =x, Kh liegt bis zum Schnittpunkt über Kg." width="320px"> </p>
+    <h3>Alternativen zur Ergänzung</h2>
+    <p>Abbildung als taktile Vorlage</p>
+    <img src="img/Abbildung2_M.svg" alt="Vorlage für den Ausdruck auf Schwellpapier" width="640px"> </p>
     <h3>unterschiedliche Darstellungen</h3>
     <p><img id="sport" src="img/sport-1.png" alt="Originalfoto schwarz weiß, Handballtorwart in Abwehrhaltung, Ball fliegt auf ihn zu" width="100%"></p>
     <button id="sport_ori" onclick="original()" aria-pressed="true">Original</button> <button id="sport_1" onclick="wechsel1()" aria-pressed="false">farbig</button> <button id="sport_2" aria-pressed="false" onclick="wechsel2()">freigestellt</button> 
@@ -111,6 +167,7 @@
   <iframe name="iframe1" id="iframe1" src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen" aria-label="3D-Canvas mit einer zusammengesetzten Figur (Kegel und Zylinder), Vorlage für den 3D-Druck"></iframe><br> 
 <button onclick=window.location.href="https://tactiles.eu/wp-content/uploads/2023/07/RS2019_W2.3mf">Download Modell</button></br>
   <a href="https://tactiles.eu">weitere Modelle unter tactiles.eu</a>
+  <p>Mehr zum Thema 3D-Druck bei um 17.30 Uhr im Raum OSG 104 (Tobias Wolfsteiner)</p>
 </section>
 <section class="container"><h2>Interaktive Inhalte</h2>
     <h3>Bilderauswahl</h3>

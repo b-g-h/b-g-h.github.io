@@ -12,14 +12,14 @@ header {
 
 
 h1 {
-  background-color: rgb(22, 65, 148);
+  background-color: #2c4278ff;
   line-height: 1.5;
   margin-top:0;
   padding: 0.4em;
   color: white;
 }
 h2, .title {
-	background-color: rgb(170, 210, 255);
+	background-color: #76c5c3;
   padding: 0.4em;
   color: #1a1f3e;
 }
@@ -63,7 +63,7 @@ button[disabled="true"]:hover {
 }
 
 button {
-    background-color: rgb(22, 65, 148);
+    background-color: #2c4278ff;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -74,7 +74,7 @@ button {
     font-weight:bold;
 }
 button:hover, button:focus, button:active {
-    background-color: rgb(170, 210, 255); /* Green */
+    background-color: #76c5c3; /* Green */
     color: black;
     font-weight:bold;
 }
