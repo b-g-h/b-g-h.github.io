@@ -3,10 +3,10 @@
 <head>
     <title>Vortrag Schulbücher vbs Kongress 2023</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         extensions: ["tex2jax.js", "[a11y]/accessibility-menu.js", "AssistiveMML.js"],
@@ -56,7 +56,7 @@
     <p><img src="img/bruchgleichung.jpg" alt="Abbildung von \frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4} in Brailleschrift" width="100%"> </p>
 
     <p><button id="LTX" tabindex=0 name="LaTeX aktivieren" aria-labelledby="LaTeX aktivieren" onclick="formel()" class="BGH">LaTeX- Anzeige aktivieren</button></p>
-    <p>Mehr zum Thema Barrierefreie Mathematik auf Webseiten mit Mathjax am Mittwoch um 11.00 Uhr im Bielschowsky-Konferenzraum mit Prof. Dr. Volker Sorge </p>    
+    <p class="hinweis">Mehr zum Thema Barrierefreie Mathematik auf Webseiten mit Mathjax am Mittwoch um 11.00 Uhr im Bielschowsky-Konferenzraum mit Prof. Dr. Volker Sorge </p>    
   </section>
   
   <section class="container">
@@ -72,7 +72,7 @@
     <p><img id="sport" src="img/sport-1.png" alt="Originalfoto schwarz weiß, Handballtorwart in Abwehrhaltung, Ball fliegt auf ihn zu" width="100%"></p>
     <button id="sport_ori" onclick="original()" aria-pressed="true">Original</button> <button id="sport_1" onclick="wechsel1()" aria-pressed="false">farbig</button> <button id="sport_2" aria-pressed="false" onclick="wechsel2()">freigestellt</button> 
   </section>
-  <section class="container"><h3>Säulendiagramm</h3>
+  <section class="container"><h3>Individuelle Anpassbarkeit</h3>
     <button id="farbe" onclick="farblos()">ohne Farbe</button>  <button id="rand" onclick="stroke()">mit Rand</button>
     <svg lang="de" id="screen-reader-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 325" preserveAspectRatio="xMinYMin slice" role="group"
          aria-labelledby="Säulendiagramm Screenreadernutzung" aria-describedby="Verteilung weltweit">
@@ -164,15 +164,14 @@
     </section>
     <section class="container"><h3>Verschiedene Ausgaben</h3>
     <a href="https://arithmico.com/">zum Arithmico</a>
-    <img src="img/arithmico.jpg" alt="Screenshot der Oberfläche des Arithmicos">
-         <!--<iframe src="https://arithmico.com/" sandbox="" height="500" width="100%"  frameborder="0" allowfullscreen="allowfullscreen" title="Arithmico"></iframe> -->
-         <p>Mehr zum Thema Barrierefreie Mathematik auf Webseiten mit Mathjax am Dienstag um mit Ulrich Kalina </p>
+    <img src="img/arithmico.jpg" width="100%" alt="Screenshot der Oberfläche des Arithmicos">
+         <p class="hinweis">Mehr zum Thema Barrierefreie Mathematik auf Webseiten mit Mathjax am Dienstag um mit Ulrich Kalina </p>
         </section>
 <section class="container"><h2>3D-Darstellungen</h2>
   <iframe name="iframe1" id="iframe1" src="https://tactiles.eu/beispielseite/" height="500" width="100%" title="Einbindung 3D-Modell tactiles.eu" frameborder="0" allowfullscreen="allowfullscreen" aria-label="3D-Canvas mit einer zusammengesetzten Figur (Kegel und Zylinder), Vorlage für den 3D-Druck"></iframe><br> 
 <button onclick=window.location.href="https://tactiles.eu/wp-content/uploads/2023/07/RS2019_W2.3mf">Download Modell</button></br>
   <a href="https://tactiles.eu">weitere Modelle unter tactiles.eu</a>
-  <p>Mehr zum Thema 3D-Druck bei um 17.30 Uhr im Raum OSG 104 (Tobias Wolfsteiner)</p>
+  <p class="hinweis">Mehr zum Thema 3D-Druck bei um 17.30 Uhr im Raum OSG 104 mit Tobias Wolfsteiner</p>
 </section>
 <section class="container"><h2>Interaktive Inhalte</h2>
     <h3>Bilderauswahl</h3>
