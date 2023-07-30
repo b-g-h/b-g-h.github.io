@@ -124,14 +124,22 @@ section {
 
 .hinweis {
   background-color: rgb(236, 255, 252);
+  background-image: url("img/vbs-ohneschrift.png");
+  background-repeat: no-repeat;
+  background-size: 8vh;
+  background-position-x: right;
+  background-position-y: bottom;
+
   border-style: solid;
+  border-width: 5px;
   border-color: #76c5c3;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 3em;
+
   margin-left: 1em;
   margin-right: 1em;
   border-radius: 10px;
   padding: 1em 1em 1em 1em;
+  
 }
 
 
