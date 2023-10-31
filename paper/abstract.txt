@@ -1,9 +1,12 @@
 Michael Schäffler, Barbara Henn, SBBZ Ilvesheim, Germany
+michael.schaeffler@sbbz-ilvesheim.de 
+barbara.henn@sbbz-ilvesheim.de
 
 Volker Sorge, MathJax Consortium
+v.sorge@mathjax.org
 
 Dorine in't Veld, Dedicon, The Netherlands
-
+DorineintVeld@dedicon.nl 
 
 Using LaTeX in Schools: Simplifying Inclusive STEM Education
 
