@@ -15,7 +15,7 @@
   SBBZ Ilvesheim, Germany
 }
 
-\author[2]{Volker Sorge}
+\author[2]{Davide Cervone, Volker Sorge}
 % \email{austind@gvsu.edu}
 \affil[2]{%
   MathJax Consortium
@@ -33,18 +33,18 @@
 
 \section{Introduction}\label{sec:intro}
 
-We report on experience of the use of {\LaTeX} in Schools to teach mathematics to
-blind and visually impaired children. For the last 20 years the German education
-has phased out the use of sophisticated mathematical Braille notations and
-replace it by teaching children from year one {\LaTeX} (or {\LaTeX}-like) notation in
-mathematics. This notation made tactile by translating it into 8-dot Euro
-Braille thus removing the use of indicators and the need express single
+We report on experience of the use of {\LaTeX} in Schools to teach mathematics
+to blind and visually impaired children. For the last 20 years the German
+education has phased out the use of sophisticated mathematical Braille notations
+and replace it by teaching children from year one {\LaTeX} (or {\LaTeX}-like)
+notation in mathematics. This notation made tactile by translating it into 8-dot
+Euro Braille thus removing the use of indicators and the need to express single
 characters with multiple Braille cells. The aim was to reduce the learning curve
 for students as well as to improve their abilities to author and communicate
 mathematics with peers and teachers that are not trained in Braille, which is
 paramount for inclusive education.
 
-We present how this approach can technically supported via web technology that
+We present how this approach can technically be supported via web technology that
 can not only render {\LaTeX}, but also provide 8 dot Braille output for expressions
 as well as compute meaningful {\LaTeX} commands for sub-expression and support for
 direct copying from web sites.
@@ -53,7 +53,7 @@ Finally, we will discuss our initial steps to transfer this model to other
 education systems, namely the Dutch system, where the current approach is
 ambivalent, in that there exists an AsciiMath-like linearized math notation for
 teaching to BVI students, while tactile math textbooks use an outdated Braille
-notation, that is effectively no longer used in teaching.  As a result students
+notation, that is effectively no longer used in teaching.  As a result, students
 are actively discouraged from studying mathematics.
 
 \section{{\LaTeX} in Education for the Blind}\label{sec:latex-in-schools}
@@ -66,7 +66,7 @@ pronounced in advanced mathematics and higher education. For BVI learners
 however this is generally not the case.
 
 Traditionally, mathematics is presented in tactile format on the basis of highly
-specialized Braille notations increases in complexity for more advanced
+specialized Braille notations, which increases in complexity for more advanced
 mathematical notation and more unconventional symbols. In particular, in
 traditional 6-dot Braille systems symbols have to be embellished with a plethora
 of indicators (e.g., for numbers, capital letter, fonts) and modifiers (for
@@ -74,16 +74,16 @@ accents, positioning etc.). For a comparison of notational systems
 see~\cite{van2022towards}.
 
 This approach has a number of drawbacks: 
-\begin{inparaenum}
+\begin{inparaenum}[(1)]
 \item The learning curve for mathematics, already steep for sighted students,
   becomes even steeper for BVI students.
 \item Students can not easily communicate their Braille math with their sighted
   peers or teachers not trained in the formalism, which is an obstacle for
   inclusive education.
-\item Math braille notation is usually easier to read but less suitable for
+\item Math Braille notation is usually easier to read but less suitable for
   writing mathematics. This is particularly compounded by the use of computers
   even with Braille input devices.
-\item Many traditional math Braille notations have a 2D variant for complex
+\item Many traditional Math Braille notations have a 2D variant for complex
   elements like nested fractions or matrices, which are difficult to display on
   a computer Braille display.
 \item Different Math Braille notations are generally not compatible and often
@@ -93,12 +93,12 @@ This approach has a number of drawbacks:
   Braille etc.
 \end{inparaenum}
 
-As consequence more than 20 years ago Germany has chosen a different path for
+As a consequence more than 20 years ago Germany has chosen a different path for
 specialist education for BVI students. Instead of continuing to teach the local
 mathematical Braille notation (Marburg System) based on 6-dot Braille and instead
 adopting uniform {\LaTeX} notation for writing and transcribing it into 8-dot
 Euro Braille. This has the advantage that 
-\begin{inparaenum}
+\begin{inparaenum}[(1)]
 \item there is no need for indicators and
   modifiers as every single ASCII character can be translated into its equivalent
   Euro Braille cell, i.e., every single character of the {\LaTeX} code corresponds
@@ -119,7 +119,7 @@ Euro Braille. This has the advantage that
 \section{{\LaTeX} to Braille}\label{sec:latex-to-braille}
 
 Obviously in early primary education very little {\LaTeX} is actually
-needed. And even then main goal is use as much as possible symbols that are
+needed. And even then the main goal is to use as much as possible symbols that are
 available on the keyboard. For example, asterisk \texttt{*} is used instead of
 \verb+\cdot+ for multiplication and simple fractions are written in beveled
 notation e.g., $\frac{1}{2}$ would be written as \texttt{1/2} instead of
@@ -188,14 +188,14 @@ corresponding {\LaTeX} output.
 
 \section{Math Notation in the Netherlands}\label{sec:math-netherlands}
 
-While similar approaches to math braille notation have been taken in other
+While similar approaches to Math Braille notation have been taken in other
 European countries using established mathematical syntax notations (e.g.,
 {\LaTeX} in Slovenia and AsciiMath in Sweden), other countries have pursued a
 different approach.
 
 We will examine the situation in The Netherlands. Over twenty years ago in The
 Netherlands math had become practically inaccessible, the primary problem being
-the lack of a braille math code. Consequently, a linear notation was developed
+the lack of a Math Braille code. Consequently, a linear notation was developed
 and introduced by Dedicon\footnote{\url{http://braille.dedicon.nl/wiskunde}}, which eases
 math communication in particular in inclusive education, but did not follow any
 pre-existing standards.
@@ -214,7 +214,7 @@ was too ambiguous for more complex expressions, mainly due to its use of spaces
 for delineation. For example, there is a rule that spaces terminate superscript
 and subscript text, which is usually very convenient but can go wrong when
 combining the two: Consider \verb+x_2 ^2+ versus \verb+x_2^2+, where the former
-is $x_2^2$, while the latter is represents $x_{2^2}$. Note that the space the
+is $x_2^2$, while the latter represents $x_{2^2}$. Note that the space between the
 $2$ and the caret symbol makes the difference, which can lead to easy mistakes.
 The main issue is the lack of clear notation that defines argument boundaries,
 which is particularly concerning with more complex expressions containing
