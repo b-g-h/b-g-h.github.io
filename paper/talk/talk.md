@@ -394,30 +394,6 @@ SVG allows to embed plenty of semantic. Where do we get it from?
   * Authors do not even realise that it is accessible out of the box
 
 
-## Data and Charts{.notes}
-
-:::Diagcess mol2 Resources/graphics/Ozone.svg Resources/graphics/Ozone.xml minify
-:::
-
-:::Standalone Click or focus on the diagram and press <kbd>A</kbd> to start, arrows to navigate and <kbd>Escape</kbd> to quit.
-:::
-
-
-## Current: Mathematical Diagrams{.notes}
-
-Source: [Tom Judson, Abstract Algebra: Theory and Application](http://abstract.ups.edu/sage-aata.html)
-{.source}
-
-* Once the graphics are understood we can do much more
-* Diagrams can be handled via screen readers as well
-
-:::Diagcess unitcircle Resources/pretext/roots-of-unity-noscale.svg Resources/pretext/roots-of-unity-noscale.xml minify
-:::
-
-:::Standalone Click or focus on the diagram and press <kbd>A</kbd> to start, <kbd>Escape</kbd> to quit, <kbd>Escape</kbd> to quit.
-:::
-
-
 ## The Challenge: Bringing it Together
 
 Writing the fully accessible document
