@@ -1,0 +1,389 @@
+:root {
+  --primaryColor: #373B44;
+}
+
+/* Based on http://markdowncss.github.io/modest/ MIT license */
+
+pre,
+code {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  font-size: 0.8rem;
+}
+
+pre {
+  padding: 0.5rem;
+  line-height: 1.25;
+  overflow-x: scroll;
+}
+pre,
+code {
+  background-color: #fafafa;
+}
+
+a,
+a:visited {
+  color: #3498db;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #2980b9;
+}
+
+html {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 32rem) and (max-width: 42rem) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  line-height: 1.85;
+  counter-reset: section;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1.414rem 0 0.5rem;
+  font-weight: inherit;
+  line-height: 1.42;
+}
+
+:root {
+  --fontSizeBase: 1rem;
+}
+
+@media (max-width: 770px) {
+  :root {
+    --fontSizeBase: 0.7rem;
+  }
+}
+
+
+h1 {
+  font-size: calc(var(--fontSizeBase) * 3);
+}
+
+h2 {
+  font-size: calc(var(--fontSizeBase) * 2);
+}
+
+h3 {
+  font-size: calc(var(--fontSizeBase) * 1.44);
+}
+
+h4 {
+  font-size: calc(var(--fontSizeBase) * 1.3);
+}
+
+h5 {
+  font-size: calc(var(--fontSizeBase) * 1.121);
+}
+
+h6 {
+  font-size: calc(var(--fontSizeBase) * 0.88);
+}
+
+small {
+  font-size: 0.707em;
+}
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open + Sans + Condensed:300,
+  300italic,
+  700);
+
+@import url(http://fonts.googleapis.com/css?family=Arimo:700, 700italic);
+
+html {
+  font-size: 18px;
+  max-width: 100%;
+}
+
+body {
+  color: #444;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arimo, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  border-bottom: 2px solid var(--primaryColor);
+  margin-bottom: 1.15rem;
+  padding-bottom: 0.5rem;
+  text-align: right;
+}
+
+h1 {
+  border-bottom: 2px solid var(--primaryColor);
+}
+
+blockquote {
+  border-left: 8px solid #fafafa;
+  padding: 1rem;
+}
+
+/* Slide effect, based on https://codepen.io/chriscoyier/pen/pMRgwW MIT licensed */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: calc(1rem + 1vw);
+}
+
+body {
+  font-size: 1.2rem;
+  overflow-y: hidden;
+}
+.slider {
+  font-family: sans-serif;
+  -webkit-scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  display: -webkit-box;
+  display: flex;
+  overflow-x: scroll;
+}
+section {
+  scroll-snap-align: start;
+  min-width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+section > * {
+  margin: 1em auto;
+  max-width: 80vw;
+  margin-top: 0.5em;
+}
+h1 {
+  text-align: right;
+  font-size: calc(1rem + 3vw);
+}
+
+.notes {
+  display: none;
+}
+
+section::after {
+  position: absolute;
+  left: 96px;
+  bottom: 48px;
+  color: var(--primaryColor);
+  counter-increment: section;
+  content: counter(section);
+}
+
+@media (max-width: 770px) {
+  section::after {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+ul {
+  font-size: 1rem;
+  padding-left: 20px;
+}
+ul ul {
+  padding-left: 50px;
+}
+
+p.left {
+  font-size: calc(1rem + 1vw);
+  color: #cc3838;
+}
+
+.input-color {
+  position: relative;
+}
+.input-color input {
+  padding-left: 20px;
+}
+.input-color .color-box {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #ccc;
+  left: 5px;
+  top: 5px;
+}
+
+.input-colors {
+  padding-left: 100px;
+}
+
+hr {
+  border: 1px solid var(--primaryColor);
+}
+
+div.diagramScale {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: -1em;
+  margin-bottom: -1em;
+}
+
+div.Author {
+  text-align: center;
+}
+
+div.Affiliations {
+  display: table;
+  align-content: center;
+}
+
+div.Affiliation {
+  display: table-cell;
+}
+
+div.Affiliation + div.Affiliation {
+  padding-left: 2em;
+}
+
+div.Affiliation > p {
+  white-space: pre-line;
+  text-align: center;
+}
+
+div.Affiliation > p > img {
+  padding-top: 1em;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.btn {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 30px;
+  width: 30px;
+
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}
+
+.btn.next {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+  right: 10px;
+}
+
+.btn.prev {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+  left: 10px;
+}
+
+
+.caption {
+    font-size: 20pt
+}
+
+.source {
+   font-size: 14pt
+}
+
+.red {
+  color: rgb(255, 119, 170);
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+.directlinks {
+    position: absolute;
+    font-size: small;
+    text-align: right;
+
+    top: 95%;
+    right: 0;
+    transform: translateY(90%);
+
+  height: 30px;
+}
+
+.directlink {
+
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    z-index: 1;
+}
+
+.directlink > a {
+    color: white;
+    border-radius: 5px;
+    padding: 1px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+table {
+  font-size: calc(var(--fontSizeBase) * .75);
+}
+
+table, th, td {
+  border: 1px solid;
+}

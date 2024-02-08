@@ -1,0 +1,22 @@
+{
+  "name": "deims-2024-talk",
+  "version": "1.0.0",
+  "description": "DEIMS 2024 talk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "watch 'npm run build' .",
+    "build:talk": "cp talk.md slides.md; node ./build.js --standalone --links; cp index.html talk.html",
+    "build": "npm run build:talk"
+  },
+  "author": "Volker Sorge",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "markdown-it": "^11.0.0",
+    "markdown-it-attrs": "^3.0.3-19",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-header-sections": "^1.0.0",
+    "minify": "^5.2.0",
+    "normalize.css": "^8.0.1"
+  }
+}
