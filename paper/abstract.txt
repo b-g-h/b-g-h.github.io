@@ -1,0 +1,34 @@
+Michael Schäffler, Barbara Henn, SBBZ Ilvesheim, Germany
+michael.schaeffler@sbbz-ilvesheim.de 
+barbara.henn@sbbz-ilvesheim.de
+
+Volker Sorge, MathJax Consortium
+v.sorge@mathjax.org
+
+Dorine in't Veld, Dedicon, The Netherlands
+DorineintVeld@dedicon.nl 
+
+Using LaTeX in Schools: Simplifying Inclusive STEM Education
+
+We report on experience of the use of LaTeX in Schools to teach mathematics to
+blind and visually impaired children. For the last 20 years the German education
+has phased out the use of sophisticated mathematical Braille notations and
+replace it by teaching children from year one LaTeX (or LaTeX-like) notation in
+mathematics. This notation made tactile by translating it into 8-dot Euro
+Braille thus removing the use of indicators and the need express single
+characters with multiple Braille cells. The aim was to reduce the learning curve
+for students as well as to improve their abilities to autor and communicate
+mathematics with peers and teachers that are not trained in Braille, which is
+paramount for inclusive education.
+
+We present how this approach can technically supported via web technology that
+can not only render LaTeX, but also provide 8 dot Braille output for expressions
+as well as compute meaningful LaTeX commands for sub-expression and support for
+direct copying from web sites.
+
+Finally, we will discuss our initial steps to transfer this model to other
+education systems, namely the Dutch system, where the current approach is
+ambivalent, in that there exists an AsciiMath-like linearized math notation for
+teaching to BVI students, while tactile math textbooks use an outdated Braille
+notation, that is effectively no longer used in teaching.  As a result students
+are actively discouraged from studying mathematics.
