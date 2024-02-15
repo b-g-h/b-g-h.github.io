@@ -14,9 +14,9 @@
 
 ***TitleSlide
 
-:::Title Barrierefreie Mathematik auf Webseiten mit Mathjax
+:::Title Using LaTeX in Schools: Simplifying Inclusive STEM Education
 :::
-:::Author Barbara Henn, Michael Schäffler, Davide Cervone, Volker Sorge, Dorine in't Veld
+:::Author Barbara Henn, Michael Schäffler, Davide Cervone, Volker Sorge, Dorine in 't Veld
 :::
 
 ***Affiliations
@@ -48,146 +48,55 @@ Dedicon, The Netherlands
 
 ## Overview
 
-* Maths on the Web
-* An introduction to MathJax
-* Accessible content with MathJax
-  * Now
-  * Future
-* Bringing it all together
-  * Formulas
-  * Diagrams
-  * Code
+Over the last 20+ years, LaTeX has been used to teach BVI children mathematics
+in Germany
+
+* Recount some of that experience
+* Technical support via MathJax
+* Similar aims in The Netherlands
 
 
-## Accessibility and the Web{.notes}
+## History
 
-* [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/)
-  * ~60 "Success Criteria" across 3 Levels: A, AA, AAA
-  * A&AA is the legal basis in most countries, AAA optional/ideal
-  * Not just the web but electronic material in general
-* WCAG's core principles: POUR
-* For **all** users all content must be:
-    * Perceivable: Alt text, sub-titles
-    * Operable: Keyboard, touch
-    * Understandable: Language of a document
-    * Robust: Not just for Browser X on OS Y
-    
+Discussions in Germany on the future of Mathematics education for BVI children
+since the early 90s.
 
-## Why is STEM Difficult?{.notes}
+* Number of blind students in mainstream schools in Germany rose significantly
+* Students working consistently with a PC 
+* Use of connected Braille display
+* Use of 8-dot Braille as opposed to traditional 6-dot
 
-Standard recommendations like WCAG fail for STEM content:
+LaTeX as teaching language suggested as early as 1993.
 
-* STEM brings together some of the hardest a11y problems
-  * Specialised vernacular, scripts, tables, formulas, diagrams
-  * Animations,  simulations, Interactive exercises
-* STEM are infinite languages
-  * meaning shifts, vernacular is added
-  * aimed at diverse audiences (pubils, students, scientists)
-  * difficult to understand (in particular automatically)
-  * precision is important (vague recognition is not enough)
-* Declarative approaches fail
+## Practice
 
-
-## Solutions to STEM{.notes}
-
-* Historical solutions:
-  * Audio recordings, large print, Braille books
-  * Use of models, tactile prints, swell paper, etc. in class
-  * Exams: Specialist support needs to be provided, often one-on-one
-* Curent problems:
-  * Most content is in electronic form
-  * Anyone can prepare material, often on the fly
-  * LMS, independent work, online examinations
-  * Interaction, simulations, videos, ...
+* Blind students learn 8-dot Braille from year one for reading
+* Particular useful for mathematics:
+  * One Braille cell per written character
+  * No indicators for numbers, capital letters, etc.
+* LaTeX for non-Ascii characters, special expressions etc.
+  * Element symbol, root symbol, etc. 
+    $\in, \sqrt{\ }$
+* Use of [simplifcations](https://www.augenbit.de/wiki/index.php?title=LaTeX-Manual_Sekundarstufe_1)
+  * use keyboard keys as much as possible, e.g., * rather than \cdot
+  * bevelled fraction rather than \frac $1/2$ $\frac{1}{2}$
+  * command abbreviations etc. 
+* Easy transition into higher education
 
 
-## Exploit the Structure of the Web{.notes}
+## Technical Support
 
-Distinct technologies addressing separate concerns/purposes.
+Easy enough for conventional material in word processors but for the Web?
 
-[Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
-on the Web:
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) for
-  structure
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) for
-  presentation/layout
-* JavaScript for interactivity/context adaptation
-* [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) for scalable vector
-  graphics
-* [WAI-ARIA](https://www.w3.org/TR/wai-aria/) for (human-oriented)
-  semantics/accessibility
-* RDF, Owl, etc. for (machine-oriented) semantics
-
-
-## Aim of my Work{.notes}
-
-* Making STEM content accessible on the web
-* Allow learners and practitioners not just to consume but to easily create
-* Use the technologies and components already there
-    * HTML, CSS, SVG, ARIA...  
-* The web is syntax, the semantic has to come from elsewhere
-    * **Note:** LaTeX, MathML, CML, MOL, etc. are all only syntax!
-* Embed (and hide) rich semantic content using this Web technology
-* Suitable semantically rich structure allows for
-    * Support of users with diverse needs
-    * Generation of alternative formats: tactile, audio-tactile, sub-titles etc.
-
-## Sourcing Semantics{.notes}
-
-* STEM subjects are living languages
-* New concepts created everyday
-* Potentially infinite
-* Trying to capture this in an declarative standard is impossible
-* Human input: Authors? Remedial Officers?
-* Automatic
-    * Exploit available sources 
-    * Use intelligent methods to automatically interpret syntax
-    * Avoid manual intervention as much as possible
-
-
-## Math Input Standards
-
-* [Ascii Math](http://asciimath.org/)
-```LaTeX
-x = (-b pm sqrt(b^2-4ac))/(2a)
-```
-* LaTeX
-```LaTeX
-x = (-b pm sqrt(b^2-4ac))/(2a)
-```
-* MathML
-```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-  <mo>=</mo>
-  <mfrac> ...
-```
-
-## Math Output
-
-* Browsers do not understand Math Input languages 
-  * (some exception for MathML)
-* Browsers do not render Math natively
-* Math rendering is not compatible with standard browser rendering model 
-* Needs to be translated into suitable markup
-  * HTML syntax and CSS for styling
-  * SVG for graphics
-
-## Example: A rendered Formula
-
-$$
-   x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
-$$
-
-:::Standalone Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.
-:::
-
-* The example uses MathJax for rendering
-* Input: LaTeX, AsciiMath, and MathML
-* Output: HTML/CSS, SVG
+* Original support by Barbara Henn in MathJax 2.7
+  * Exposed the overall LaTeX formula
+  * Allowed for direct copying of LaTeX
+  * Braille translation via screen reader translation tables
+* Future support in MathJax 4
+  * Direct aria support
+  * Direct generation of Braille
 
 ## What is MathJax?
-
 
 * [MathJax](https://www.mathjax.org) is an open-source JavaScript library for
     rendering Mathematics in all
@@ -203,9 +112,6 @@ $$
 
 
 ## Making Math Accessible
-
-* Content is electronic and ephemeral
-* The old techniques are dead!
 
 $$
    x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
@@ -269,162 +175,122 @@ $$
 * Accessibility "built-in"
 
 
-## Multi-modality
 
-* Speech or Braille output (e.g., Nemeth)
-* Linear nemeth output
-  $$ \vec{\nabla} \times \vec{F} =
-            \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
-          + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
-          + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}
-   $${#braille}
+## Euro Braille Translation
 
-:::Standalone Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.
-:::
+* SRE has already a Nemeth rule set implementation
+* Add {\LaTeX} to 8-dot Braille
+* Generally straight forward
+  * One Braille cell per character
+  * Engage a small rule set for some of the conventions
+[augenbit.de](https://augenbit.de/wiki/index.php?title=LaTeX-Manual_LaTeX_Grundregeln)
+  * Provide customisation
+* Provide direct copy and paste via selection
 
+## Recursive Exploration
 
-## Using MathJax day-to-day
+* Generally not difficult
+* None trivial for {\LaTeX}
+  * Turing complete
+  * MathJax uses a recursive stack machine for parsing
+* Not all expressions lead to "sensible" output
+* Copying of sub-expressions?
 
-More at [docs.mathjax.org](docs.mathjax.org)
-
-* Transforming Math for the Web
-    * Use document converter like PanDoc
-    * many-to-many converter works also for documents in word, markdown, etc.
-* Ensure rendering with MathJax in HTML
-    * Include a [script]<https://www.mathjax.org/#gettingstarted> line to load
-      MathJax from a CDN `<script id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>`
-    * Or ask PanDoc to include it for you
-* Enable Accessibility
-    * Automatically included and selectable in the context menu
-    * **With MJ v4 there is no need to switch it on anymore**
-    * Customisation possible by including configuration options
-    * Personalisation by users that are saved in a cookie
-* Prerender mathematics for reading offline reading and in ePub
-    readers without JavaScript support
-* Accessibilty extension will not work, BUT speech can be included as
-    alt text, aria-labels or descriptions
+[Examples](https://mathjax.github.io/MathJax-demos-web/euro-braille/)
 
 
+## Experiences
 
-## Some Challenging Examples{.notes}
+* Learning curve considerably less steep than for Math Braille code
+* Ideal for inclusive education
+  * Communication easier between BVI students and teachers or sighted peers
+  * If necessary rendering straight forward
+* Easier transition into higher education
+* Technical perspective: Full linearisation possible even for inherently 2D
+  structures [compare 2d
+  Nemeth](https://speech-rule-engine.github.io/sre-tests/output/nemeth/Nemeth2D.html))
+  
+## In German{.notes}
 
-Nemeth is challenging to get right automatically, but sometimes automation is better:
-
-* Subtlety of spaces:
-   * $44\,352\,000$ is a single number and transcribes as ⠼⠲⠲⠒⠢⠆⠴⠴⠴ 
-   * $(0110\,1110\,0110)$ is not a single number but a vector, hence ⠷⠼⠴⠂⠂⠴⠀⠼⠂⠂⠂⠴⠀⠼⠴⠂⠂⠴⠾
-   * $(n, E) = (451{,}231)$ [The right hand side is not a single number](http://abstract.ups.edu/aata/crypt-exercises.html#grE) ⠷⠝⠠⠀⠠⠑⠾⠀⠨⠅⠀⠷⠲⠢⠂⠠⠀⠆⠒⠂⠾
-* Context helps
-    $$PAP^{-1} = B$$
-    [is not an abbreviation](http://abstract.ups.edu/aata/ssets-ection-sets-and-equivalence-relations.html#mDC): ⠠⠏⠠⠁⠠⠏⠘⠤⠂⠀⠨⠅⠀⠠⠃
-
-## Voicing Complex Content
-
-  $$
-  \begin{prooftree}
-  \AxiomC{}
-  \RightLabel{$Hyp^{1}$}
-  \UnaryInfC{$P$}
-  \AXC{$P\to Q$}
-  \RL{$\to_E$}
-  \BIC{$Q^2$}
-  \AXC{$Q\to R$}
-  \RL{$\to_E$}
-  \BIC{$R$}
-  \AXC{$Q$}
-  \RL{Rit$^2$}
-  \UIC{$Q$}
-  \RL{$\wedge_I$}
-  \BIC{$Q\wedge R$}
-  \RL{$\to_I^1$}
-  \UIC{$P\to Q\wedge R$}
-  \end{prooftree}
-  $$
-
-:::Standalone Click or focus on the formula and press <kbd>ENTER</kbd> to start, <kbd>Escape</kbd> to quit.
-:::
-
-* Try to express this in MathML
-
-## MathJax: Next Version
-
-MathJax 4 will be released soon, currently in beta
-
-* Responsive equations
-* Automatic linebreaking (inline and display math)
-* LaTeX to 8 dot Euro Braille support
-* Recursive LaTeX subformulas
-* Direct integration with screen readers via ARIA tree patterns
+* Lernkurve ist nicht steil für Schüler
+* 8-Punkt als Start beim Lese-Lernprozess und auch in Mathematik mit den Zeichen für Ziffern und Rechenzeichen 
+* LaTeX-Befehle nach und nach: Element-Symbol, Wurzel, Bruch, ... (semantisch)
+8-Punkt nicht viel langsamer als 6-Punkt zu lesen (siehe Zebra-Studie)
+Fließender Übergang zum Studium 
+Für Lehrer an der allgemeinen Schule (in der Inklusion) sehr gut geeignet, da sie als Mathematiklehrer Latex entweder schon von der Universität kennen oder sich schnell einarbeiten können (weniger als eine Stunde inkl. Tabelle auf Augenbit.de: https://www.augenbit.de/wiki/index.php?title=LaTeX-Manual_Sekundarstufe_1)
+Verkürzte Schreibweisen erlaubt 
 
 
-## Current Work{.notes}
+## Hurdles to Wider Adoption (Technical)
 
-* Semantic extraction from context
-  * Work with M Balakrishnan and A Bansal, IIT Delhi
-  * Concordance analysis and ML
-* Self-voicing and synchronised highlighting
-* Semi-graphical structures (proofs, graphs, diagrams)
-* Improvement to existing rule system
-  * Abstract Algebra: Permutations, cycles, cayley tables, etc.
-  * Physics: Bra-ket notation, ...
-  * Chemistry: info from mhchem package, automatic naming of reactants
+* 8 dot vs cursor
+  * Modern Braille displays can overcome that
+* Expressions can get longer
+  * Use of [shortened commands](https://www.augenbit.de/wiki/index.php?title=LaTeX-Manual_Sekundarstufe_1)
 
+## Hurdles to Wider Adoption (Societal)
 
-## What about STEM Diagrams{.notes}
+Quis custodiet ipsos custodes?{.notes}
 
-* WCAG says: Provide alternative text
-* For STEM diagrams this is generally not enough
-* Interaction is even more important to explore content
-* Automatic recognition works pretty well for "information free" images
-* In STEM you need precision
-
-SVG allows to embed plenty of semantic. Where do we get it from?
+* Who educates the educators?
+  * In the German system most will have had exposure to LaTeX at University
+  * Other staff can be easily trained often in less than an hour using simple
+    tables, see [augenbit.de](https://augenbit.de/wiki/index.php?title=LaTeX-Manual_Sekundarstufe_1)
+  * In other places this might not be the case
+* But... LaTeX is so hard to learn!
+  * No, it is not!
+  * the document structure 
+  * fighting the engine
+* Market pressure: There is a big industry behind MathML, Nemeth, etc.
 
 
 
-## Generate with Knowledge{style="margin-bottom:.5em"}{.notes}
+## Dorine's Part{.notes}
 
-* Easier way to embed knowledge is, if I already know what I am talking about
-* [Flowcharts from MS Visio](https://progressiveaccess.com/flowcharts/examples/)
-  * Ongoing work with Dedicon (Netherlands)
-* [Data Visualisations](https://progressiveaccess.com/physics)
-  * From models in R with package BrailleR (with Jonathan Godfrey)
-  * [A sonification example](http://127.0.0.1:8080/Progressive/Production/diagram-explorer/samples/)
-  * Authors do not even realise that it is accessible out of the box
+## Previous Work in The Netherlands
 
+DEIMS 2016 Davy Kager and Dorine in ‘t Veld presented the Dutch linear math notation
 
-## The Challenge: Bringing it Together
+* Pros
+  * Allows direct communication with sighted
+  * Hardly a learning curve and tolerant to deviations in descriptions (e.g. no problem if SQ or SQR or SQRT is used)
+  * Requires no extra software
+  * Remains consistent (only keyboard characters)
+* Cons
+  * Needs stricter definitions of use of brackets and spaces in complex formulas
+  * Not a general standard
+  * No renderer for spatial display (and back)
+  * Some areas still not covered
+ 
+ 
+## What happened since?
 
-Writing the fully accessible document
+No new developments since presentation at DEIMS 2016
 
-* Use a Clean Base Format: [PreTeXt](https://pretextbook.org/) an uncomplicated
-XML vocabulary for open source textbooks, monographs, and research articles.
-* PreTeXt to multiple output formats
-  * Structure in XML
-  * Mathematics in LaTeX
-  * Graphics mainly in LaTeX
-  * [Over 100 individual projects](https://pretextbook.org/catalog.html): Math, CS, engineering, music theory, ...
-* with ALL components accessible
-  * Math 
-  * Figures
-  * Code
-  * ...
+A downward spiral/chicken-and-egg-problem:
 
-## The Result
+* Very few pupils and students do (complex) math.
+* Pupils/students have to get by very much on their own
+* Only very motivated and math-able students choose math
+* No specialized teachers who know braille or screenreaders.
+* It is hard for organisations for the VI to build and maintain expertise.
+* This is not a typically Dutch problem.
+* Which is why we had ICCHP-Summer University (until 2016).
+ 
 
-[A recent research paper](https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html)
+## Braille in the Netherlands
 
+* Several braille tables in screenreaders are in use 6-dot, 8-dot, EU, ‘American’, ‘Marburg’
+* Everyone has his/her own braille on the braille display
+* Everyone wants what he/she is used to
+* Only for printing (or Braille on tactile images) this is a problem.
+ 
 
-## Conclusions
+## The Future
 
-* Basic mechanisms for accessible STEM on the web are available
-* We just have to use them right
-* Do not impede the creativity of authors
-* Stay future ready: Preserve as much information as possible
-    * Once it is an image the information is lost!
-    * When producing formats like MathML __do not throw away your LaTeX__!
-* Here we need more emphasis on
-    * automatic interpretation,
-    * machine learning and understanding
-    * implementation of flexible workflows
+Now that we have a notation that ‘works’, no urgency to change is felt.
+
+* Dedicon builds what is asked for by educators and students.
+* Hopefully the German approach raises the feeling of urgency to change.
+* The advantages are obvious.
+* We believe MathJax is the way to accessible math.
