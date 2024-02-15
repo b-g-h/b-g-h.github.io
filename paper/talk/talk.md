@@ -79,7 +79,7 @@ LaTeX as teaching language suggested as early as 1993.
     $\in, \sqrt{\ }$
 * Use of [simplifcations](https://www.augenbit.de/wiki/index.php?title=LaTeX-Manual_Sekundarstufe_1)
   * use keyboard keys as much as possible, e.g., * rather than \cdot
-  * bevelled fraction rather than \frac $1/2$ $\frac{1}{2}$
+  * bevelled fraction rather than \frac:  $1/2$ vs $\frac{1}{2}$
   * command abbreviations etc. 
 * Easy transition into higher education
 
@@ -227,6 +227,7 @@ Verkürzte Schreibweisen erlaubt
   * Modern Braille displays can overcome that
 * Expressions can get longer
   * Use of [shortened commands](https://www.augenbit.de/wiki/index.php?title=LaTeX-Manual_Sekundarstufe_1)
+  * Other [example](https://b-g-h.github.io/)
 
 ## Hurdles to Wider Adoption (Societal)
 
