@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Beispielseite Klett</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js", "[a11y]/accessibility-menu.js", "AssistiveMML.js"],
+      jax: ["input/TeX", "output/SVG"],
+      menuSettings: {
+        collapsible: false,
+        autocollapse: false,
+        explorer: false
+      },
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+      },
+
+      sre: {
+        locale: 'de'
+      },
+
+      "SVG": {
+        internalSpeechTitles: true,
+        font: "STIX-Web",
+        scale:  150,
+        blacker: 5,
+       }
+    });
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
+  <script type="text/javascript" src="LaTeX.js"></script>
+  <script type="text/javascript" src="js/sport.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header style="text-align: center;">
+    <img id="header" src="img/ssilv_logo.svg" alt="Schloss-Schule Ilvesheim Logo mit Zusatz Medienberatungszentrum"><br>
+
+    <h1>
+      Die Bedeutung assistiver Hilfsmittel und digitaler Barrierefreiheit für Teilhabe und Inklusion von Schülerinnen und
+      Schülern mit Behinderung</h1>
+     
+  </header>
+  
+  <article>
+    <section class="container"> 
+      <h2>Tastaturbedienbarkeit</h2>
+      <p><button>Button 1</button> <button>Button 2</button> <button>Button 3</button></p>
+      <p><label for="input1">Namensfeld </label><input type="text" name="input1" id="input1"/></p>
+      <p><label for="subscribe">Aktivieren Sie dieses Feld für weitere Informationen </label><input class="check" type="checkbox" name="subscribe" id="subscribe"></p>
+      
+  </section>
+    <section class="container"> 
+      <h2>Sprachausgabe und Vergrößerung</h2>
+      <h3>Text ist nicht gleich Text!</h3>
+      <h4 style="line-height: 1.5em; color: #3ab49f;">TOPTHEMA VORMITTAGS: Bildungsgerechtigkeit</h4>
+      <img src="../img/textbeispiel.jpg" alt="Bild" width="800px" >
+      <h3 style="line-height: 1.5em; color: #3ab49f; border-style: none;"> Die Bedeutung assistiver Hilfsmittel und digitaler Barrierefreiheit für Teilhabe und Inklusion von Schülerinnen und
+        Schülern mit Behinderung</h3>
+    <ul class="flex-container">
+     <li class="flex-item"><div style="font-size: 2em; font-weight: bold;">1.</div><br>Arbeit mit Screenreader und Braillezeile</li>
+     <li class="flex-item"><div style="font-size: 2em; font-weight: bold;">3.</div><br>Digitale Barrieren</li>
+     <li class="flex-item"><div style="font-size: 2em; font-weight: bold;">2.</div><br>Arbeit mit Vergrößerungssoftware</li>
+     <li class="flex-item"><div style="font-size: 2em; font-weight: bold;">4.</div><br>Anforderungen an digitale Bildungsmedien</li>
+    </ul>
+    
+    <h3>Vektorgrafik vs Pixelgrafik</h3>
+    <p style="box-sizing: border-box;">
+        <img src="img/Abbildung_M.png" style="padding-right: 50px;" alt="erster Quadrant, zwei Kurven Kg und Kh, welche im Ursprung beginnen und sich bei (4|4) schneiden. Die Kurven sind achsensymmetrisch zur Geraden f(x) =x, Kh liegt bis zum Schnittpunkt über Kg." width="320px">
+        <img src="img/Abbildung_M.svg" alt="erster Quadrant, zwei Kurven Kg und Kh, welche im Ursprung beginnen und sich bei (4|4) schneiden. Die Kurven sind achsensymmetrisch zur Geraden f(x) =x, Kh liegt bis zum Schnittpunkt über Kg." width="320px"> </p>
+    <h2>Alternativen zur Ergänzung</h2>
+  
+      <h3>Abbildung als taktile Vorlage</h3>
+      <img src="img/Abbildung2_M.svg" alt="Vorlage für den Ausdruck auf Schwellpapier" width="640px"> </p>
+      <h3>Unterschiedliche Darstellungen</h3>
+      <p><img id="sport" src="img/sport-1.png" alt="Originalfoto schwarz weiß, Handballtorwart in Abwehrhaltung, Ball fliegt auf ihn zu" width="100%"></p>
+      <button id="sport_ori" onclick="original()" aria-pressed="true">Original</button> <button id="sport_1" onclick="wechsel1()" aria-pressed="false">farbig</button> <button id="sport_2" aria-pressed="false" onclick="wechsel2()">freigestellt</button> 
+    <p>3D-Druck Modell als Alternative</p>
+    <p style="box-sizing: border-box;"><img src="../img/pyra.png" alt="Modell aufgeschnittene Pyramide" width="400px" style="padding-right: 50px;"><img src="../img/bakterienzelle.png" alt="Foto Modell Bakterienzelle" width="400px"></p>
+    </section>
+    <section class="container">
+      <h2>Mathe mit der Sprachausgabe</h2>
+      <h3>Bruchgleichungen</h3>
+      Eine Bildbeschreibung sollte doch ausreichen, oder?
+   
+      <p style="margin-bottom: 50vh; margin-top: 60vh; font-size: 46px; line-height: 200%;">Bruch x plus 4 Bruchstrich x Ende Bruch ist gleich Bruch 16 Bruchstrich x Quadrat minus 4x Ende Bruch minus Bruch 4 Bruchstrich x minus 4 Ende Bruch</p>
+      <h2>Fazit: so ist Mathematik nicht möglich!</h2> 
+      Eine schriftliche Repräsentation ist zwingend erforderlich.
+      $$\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$$
+      <h2 style="margin-top: 20vh;">LaTeX als Mathematikschrift</h2>
+      <p>\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}</p>
+      <p><img src="img/bruchgleichung.jpg" alt="Abbildung von \frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4} in Brailleschrift" width="100%"> </p>
+
+      <p><button id="LTX" tabindex=0 name="LaTeX aktivieren" aria-labelledby="LaTeX aktivieren" onclick="formel()" class="BGH">LaTeX- Anzeige aktivieren</button></p>
+          
+    </section>
+    <section class="container"><h2>Interaktive Inhalte</h2>
+    <iframe src="https://blubskurse.ssilv.de/wp-admin/admin-ajax.php?action=h5p_embed&id=2" width="958" height="212" frameborder="0" allowfullscreen="allowfullscreen" title="Memory"></iframe><script src="https://blubskurse.ssilv.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+    </section>
+  </article>
+</body>
+
+</html>
