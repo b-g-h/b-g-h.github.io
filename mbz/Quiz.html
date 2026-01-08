@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Präsentieren Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .quiz-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            background-color: #f8f9fa;
+        }
+        .question-number {
+            font-weight: bold;
+            color: #3498db;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .option {
+            margin: 8px 0;
+            padding: 10px;
+            background-color: #e9f7fe;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .option:hover {
+            background-color: #d1e7ff;
+        }
+        .option.selected {
+            background-color: #3498db;
+            color: white;
+            border: 2px solid #1f618d;
+        }
+        .option.selected::after {
+            content: " (ausgewählt)";
+            font-weight: bold;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        .result.correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .result.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #submit-btn {
+            background-color: #27ae60;
+        }
+        #submit-btn:hover {
+            background-color: #219653;
+        }
+        #restart-btn {
+            background-color: #e74c3c;
+        }
+        #restart-btn:hover {
+            background-color: #c0392b;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        .selected-indicator {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .focusable {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+        /* Hervorhebung für falsche Antworten */
+        .incorrect-answer {
+            background-color: #f8d7da !important;
+            color: #721c24 !important;
+            border: 1px solid #f5c6cb !important;
+        }
+        .correct-answer {
+            background-color: #d4edda !important;
+            color: #155724 !important;
+            border: 1px solid #c3e6cb !important;
+        }
+        .answer-container {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .correct-answer-container {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+        .incorrect-answer-container {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+        /* Schriftliche Hervorhebung */
+        .status-indicator {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .correct-status {
+            color: #155724;
+        }
+        .incorrect-status {
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Präsentieren Quiz</h1>
+        <p>Beantworte die folgenden 6 Fragen zum Präsentieren.</p>
+        <div id="quiz">
+            <!-- Fragen werden hier dynamisch eingefügt -->
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="submit-btn" aria-label="Antworten prüfen">Antworten prüfen</button>
+            <button id="restart-btn" aria-label="Neu starten">Neu starten</button>
+        </div>
+        <div id="result" class="result" role="region" aria-label="Ergebnis" tabindex="-1" style="display: none;">
+            <!-- Ergebnis wird hier angezeigt -->
+        </div>
+    </div>
+  
+    <script>
+        // Quiz-Fragen und Antworten
+        const questions = [
+            {
+                question: "Was ist bei der Körperhaltung zu beachten?",
+                options: [
+                    "Am besten offene Haltung zeigen, nicht festhalten",
+                    "Auf einen Stuhl setzen, so dass man mittig vor der Folie sitzt",
+                    "sich klein machen, damit alles besser zu sehen ist"
+                ],
+                correct: 0,
+                explanation: "Deine Körperhaltung zeigt, wenn du dich mit deinem Thema während der Präsentation wohlfühlst. Halte dich also nirgendwo fest, sondern zeige mit einer offenen Haltung, dass du gerne was zu deinem Thema erzählst. Alle hören dir viel lieber zu!"
+            },
+            {
+                question: "Worauf sollte ich bei der Gestik achten?",
+                options: [
+                    "Viel Bewegung bewirkt einen besseren Vortrag",
+                    "Aufzählungsgesten können hilfreich sein",
+                    "lieber keine Hände nutzen, sie besser in die Hosentasche stecken."
+                ],
+                correct: 1,
+                explanation: "Gestikulieren heißt nicht einfach mit den Händen rumfuchteln. Gesten können den Vortrag strukturieren und Inhalte veranschaulichen. Aufzählungsgesten (erstens, zweitens, drittens) unterstützen deine inhaltliche Struktur. Der Einsatz von linker und rechter Hand verdeutlicht, dass es zwei verschiedene Aspekte gibt (einerseits, andererseits). Gesten zeigen außerdem auch, dass dir etwas wichtig ist."
+            },
+            {
+                question: "Wie ist das mit der Mimik?",
+                options: [
+                    "Ein Vortrag ist eine ernste Sache, daher nicht lächeln.",
+                    "Ein freundliches Lächeln zur Begrüßung kann helfen",
+                    "Lache viel während der Präsentation, das macht gute Stimmung."
+                ],
+                correct: 1,
+                explanation: "Wem hörst du lieber zu? Jemandem, der einen gelangweilten Gesichtsausdruck  hat oder jemand, der dich anlächelt? Ein freundliches Lächeln zur Begrüßung zeigt, dass deine Zuhörer willkommen sind. Wer freundlich ist, wirkt kompetent und souverän."
+            },
+            {
+                question: "Was kann ich mit meiner Blickrichtung bewirken?",
+                options: [
+                    "Schaue auf den Boden, das zeigt Bodenständigkeit.",
+                    "Regelmäßiger Blickkontakt wirkt persönlich ansprechend.",
+                    "Schaue die Folien an, die sind wichtig."
+                ],
+                correct: 1,
+                explanation: "Durch regelmäßigen Blickkontakt fühlen sich deine Zuhörer von dir persönlich angesprochen. Versuche den Blick also Richtung Zuhörer zu wenden. "
+            },
+            {
+                question: "Kleidung",
+                options: [
+                    "Bunt macht Laune! Verkleide dich etwas.",
+                    "Schwarz ist die beste Farbe. Von Kopf bis Fuß.",
+                    "Die Kleidung muss zu dir passen. Sie soll nicht ablenken und sollte bequem sein."
+                ],
+                correct: 2,
+                explanation: "Die Kleidung muss zu dir passen. Kleidung verrät aber auch, ob du die Sache ernst nimmst oder ob du dich verstellst. Am wichtigsten ist, dass die Kleidung nicht ablenkt oder dich einschränkt, sie muss also auch praktisch sein. "
+            },
+            {
+                question: "Verhalten im Raum",
+                options: [
+                    "Bleibe immer stehen",
+                    "Bewege dich ruhig etwas im Raum, verstecke dich nicht",
+                    "Laufe ständig hin und her vor den Folien."
+                ],
+                correct: 1,
+                explanation: "Während alle sitzen bist du bei deiner Präsentation die einzige Person im Raum, die sich auch bewegen darf - die Chance solltest du dir nicht entgehen lassen. Versteck dich also nicht hinter deinem Laptop und achte darauf, dass du genügend Platz hast, um dich zu bewegen."
+            }
+        ];
+  
+        // DOM-Elemente
+        const quizContainer = document.getElementById('quiz');
+        const resultContainer = document.getElementById('result');
+        const submitButton = document.getElementById('submit-btn');
+        const restartButton = document.getElementById('restart-btn');
+  
+        // Globale Variablen
+        let userAnswers = [];
+        let score = 0;
+  
+        // Funktion zur Erstellung der Quiz-Fragen
+        function createQuiz() {
+            quizContainer.innerHTML = '';
+            userAnswers = [];
+            score = 0;
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.innerHTML = `
+                    <div class="question-number">Frage ${index + 1}:</div>
+                    <h3>${q.question}</h3>
+                    <div class="options" id="options-${index}">
+                        ${q.options.map((option, i) => `
+                            <div class="option" data-question="${index}" data-option="${i}" role="button" tabindex="0" aria-label="Antwort ${String.fromCharCode(65 + i)}: ${option}">
+                                ${String.fromCharCode(65 + i)}. ${option}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                quizContainer.appendChild(questionDiv);
+            });
+  
+            // Event-Listener für die Optionen
+            document.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const questionIndex = parseInt(this.getAttribute('data-question'));
+                    const optionIndex = parseInt(this.getAttribute('data-option'));
+                    // Entferne die Auswahl aus allen Optionen der gleichen Frage
+                    document.querySelectorAll('.option[data-question="' + questionIndex + '"]').forEach(opt => {
+                        opt.classList.remove('selected');
+                        opt.setAttribute('aria-pressed', 'false');
+                    });
+                    // Markiere die ausgewählte Option
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    // Speichere die Antwort
+                    userAnswers[questionIndex] = optionIndex;
+                });
+                // Tastaturunterstützung
+                option.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+  
+            // Fokus auf das erste Element setzen
+            setTimeout(() => {
+                const firstOption = document.querySelector('.option');
+                if (firstOption) {
+                    firstOption.focus();
+                }
+            }, 100);
+        }
+  
+        // Funktion zur Anzeige der Ergebnisse
+        function showResults() {
+            score = 0;
+            let resultHTML = '';
+            questions.forEach((q, index) => {
+                const userAnswer = userAnswers[index];
+                const isCorrect = userAnswer === q.correct;
+                if (isCorrect) {
+                    score++;
+                }
+                
+                // Erstelle HTML für die Ergebnisanzeige
+                let userAnswerText = 'Keine Antwort gegeben';
+                let userAnswerClass = '';
+                let statusIndicator = '';
+                
+                if (userAnswer !== undefined) {
+                    userAnswerText = String.fromCharCode(65 + userAnswer) + '. ' + q.options[userAnswer];
+                    userAnswerClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+                    statusIndicator = isCorrect ? 
+                        '<span class="status-indicator correct-status">Richtig!</span>' : 
+                        '<span class="status-indicator incorrect-status">Leider falsch.</span>';
+                } else {
+                    statusIndicator = '<span class="status-indicator incorrect-status">Leider falsch.</span>';
+                }
+                
+                let correctAnswerText = String.fromCharCode(65 + q.correct) + '. ' + q.options[q.correct];
+                let answerContainerClass = isCorrect ? 'correct-answer-container' : 'incorrect-answer-container';
+                
+                resultHTML += `
+                    <div class="question">
+                        <div class="question-number">Frage ${index + 1}:</div>
+                        <h3>${q.question}</h3>
+                        <div class="answer-container ${answerContainerClass}">
+                            <p><strong>${statusIndicator}</strong>
+                            <p><strong>Deine Antwort:</strong> <span class="${userAnswerClass}">${userAnswerText}</span></p>
+                            <p><strong>Richtige Antwort:</strong> ${correctAnswerText}</p>
+                        </div>
+                        <p class="explanation">${q.explanation}</p>
+                    </div>
+                `;
+            });
+            // Bestimme den passenden Text basierend auf der Punktzahl
+            let message;
+            let subMessage;
+            if (score >= 6) {
+                message = 'Herzlichen Glückwunsch!';
+                subMessage = 'Das sieht doch klasse aus!';
+            } else if (score >= 4) {
+                message = 'Gut gemacht!';
+                subMessage = 'Du bist auf dem richtigen Weg!';
+            } else {
+                message = 'Das kannst du besser!';
+                subMessage = 'Mit etwas mehr Übung schaffst du es!';
+            }
+            // Ergebnis in das Result-Element einfügen
+            resultContainer.innerHTML = `
+                <h2>${message}</h2>
+                <p>Du hast ${score} von ${questions.length} Fragen richtig beantwortet.</p>
+                <p>${subMessage}</p>
+                ${resultHTML}
+            `;
+            // Ergebnis anzeigen
+            resultContainer.style.display = 'block';
+            // Fokus auf das Ergebnis setzen
+            resultContainer.focus();
+            resultContainer.setAttribute('tabindex', '-1');
+            // Scrollen zum Ergebnis
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+  
+        // Quiz initialisieren
+        createQuiz();
+  
+        // Event-Listener für Buttons
+        submitButton.addEventListener('click', function() {
+            showResults();
+        });
+  
+        restartButton.addEventListener('click', function() {
+            // Ergebnis ausblenden
+            resultContainer.style.display = 'none';
+            // Quiz neu erstellen
+            createQuiz();
+            // Fokus auf das erste Frageelement setzen
+            setTimeout(() => {
+                const firstOption = document.querySelector('.option');
+                if (firstOption) {
+                    firstOption.focus();
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>
