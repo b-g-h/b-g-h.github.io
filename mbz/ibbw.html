@@ -95,7 +95,7 @@
       <p style="margin-bottom: 50vh; margin-top: 60vh; font-size: 46px; line-height: 200%;">Bruch x plus 4 Bruchstrich x Ende Bruch ist gleich Bruch 16 Bruchstrich x Quadrat minus 4x Ende Bruch minus Bruch 4 Bruchstrich x minus 4 Ende Bruch</p>
       <h2>Fazit: so ist Mathematik nicht möglich!</h2> 
       Eine schriftliche Repräsentation ist zwingend erforderlich.<br>
-      <code>$$\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$$</code>
+      $$\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}$$
       <h2 style="margin-top: 20vh;">LaTeX als Mathematikschrift</h2>
       <p>\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}</p>
       <p><img src="img/bruchgleichung.jpg" alt="Abbildung von \frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4} in Brailleschrift" width="100%"> </p>
@@ -154,5 +154,26 @@
             document.getElementById('btnStr1')?.addEventListener('click', stroke1);
             document.getElementById('btnStr2')?.addEventListener('click', stroke2);
             document.getElementById('btnZurueck')?.addEventListener('click', back);
+            
+          function formel(){
+            var list = document.getElementsByTagName("script"); k =0;
+            var b1 = document.getElementById("LTX");
+            b1.setAttribute("disabled", true);
+            b1.innerHTML = "LaTeX Anzeige ist aktiv";
+            /*b1.setAttribute("style", "display: none;")*/
+
+            for (i=0; i<list.length; i++){var attribute  = list[i].getAttribute("type");
+            if(attribute=="math/tex"||attribute=="math/tex; mode=display")
+                {k=k+1;
+              var neu = document.createElement("span");
+              var Eltern = document.getElementById("MathJax-Element-" + k +"-Frame").parentNode;
+              var child = document.getElementById("MathJax-Element-" + k +"-Frame")
+
+              Eltern.insertBefore(neu, child);
+              neu.classList.add("sr-only");
+              neu.appendChild(document.createTextNode(document.getElementById("MathJax-Element-"+k).innerHTML));
+                }
+                {};};
+            };
 </script>
 </html>
