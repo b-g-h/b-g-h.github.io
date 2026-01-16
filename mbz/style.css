@@ -1,3 +1,10 @@
+@media (prefers-color-scheme: dark) {
+body{
+background-color: hsl(223, 46%, 9%);;
+color: #ffff;
+}
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: calc(0.6em + 1vmin);
@@ -16,21 +23,34 @@ header {
   font-size: calc(0.8em + 1vmin);
 }
 
-h1 {
-  color: #2c4278ff;
+@media (prefers-color-scheme: light) {
+  h1 {
+  color: hsl(223, 46%, 32%);
+  }
+}
+h1{
   line-height: 1.5;
   margin-top:0;
   padding: 0.4em;
 }
+
 h2, .title {
 	background-color: #76c5c3;
   padding: 0.4em;
   color: #1a1f3e;
 }
-h3 {
+
+
+@media (prefers-color-scheme: light) {
+  h3 {
   color: #1a1f3e;
-  padding: 0.4em;
   border-bottom-color: #1a1f3e;
+  }
+}
+
+h3 {
+  
+  padding: 0.4em;
   border-bottom-style: solid;
   border-bottom-width: 2px;
 }
