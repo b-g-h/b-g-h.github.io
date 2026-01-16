@@ -3,37 +3,39 @@
 <head>
   <title>IBBW Besuch Januar 2026</title>
   <link rel="stylesheet" href="style.css">
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      extensions: ["tex2jax.js", "[a11y]/accessibility-menu.js", "AssistiveMML.js"],
-      jax: ["input/TeX", "output/SVG"],
-      menuSettings: {
-        collapsible: false,
-        autocollapse: false,
-        explorer: false
-      },
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-      },
-
-      sre: {
-        locale: 'de'
-      },
-
-      "SVG": {
-        internalSpeechTitles: true,
-        font: "STIX-Web",
-        scale:  150,
-        blacker: 5,
-       }
-    });
+  <script>
+  MathJax = {
+    svg: {
+    scale: 1.5,
+    blacker: 5
+  },
+  options: {
+    enableExplorer: true,
+    enableSpeech: true,       
+    enableBraille: true,      
+    sre: {
+      locale: 'de',
+      braille: 'euro'         
+    },
+    a11y: {
+    speech: true,                      // switch on speech output
+    braille: true,                     // switch on Braille output
+    subtitles: true,                   // show speech as a subtitle
+    viewBraille: true,                // display Braille output as subtitles
+    roleDescription: 'math',           // the role description to use for math expressions
+    highlight: 'None',
+  
+    backgroundColor: 'Blue',           // color for background of selected sub-expression
+    backgroundOpacity: 30,             // opacity for background of selected sub-expression
+    foregroundColor: 'Black',          // color to use for text of selected sub-expression
+    foregroundOpacity: 100,     
+    }
+  }
+}
   </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"></script>
-  <script type="text/javascript" src="LaTeX.js"></script>
-  <script type="text/javascript" src="js/sport.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+<script type="text/javascript" src="js/sport.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -100,7 +102,6 @@
       <p>\frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4}</p>
       <p><img src="img/bruchgleichung.jpg" alt="Abbildung von \frac{x +4}{x} =\frac{16}{x^2 -4x} -\frac{4}{x -4} in Brailleschrift" width="100%"> </p>
 
-      <p><button id="LTX" tabindex=0 name="LaTeX aktivieren" aria-labelledby="LaTeX aktivieren" onclick="formel()" class="BGH">LaTeX- Anzeige aktivieren</button></p>
           
     </section>
     <section class="container"><h2>Interaktive Inhalte</h2>
